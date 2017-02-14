@@ -21,6 +21,10 @@ p{
     text-align: center;
 }
 
+#p_right{
+    text-align: left;
+}
+
 #form {
     text-align: center;
 }
@@ -50,3 +54,4 @@ ul#menu li a:hover {
     color: white;
     background-color: DarkBlue;
 }
+
