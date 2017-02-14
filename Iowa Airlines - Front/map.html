@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html id="map_html">
   <head>
     <link href="site.css" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Where would you like to go?</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 15px;
-        padding: 0;
-      }
-    </style>
   </head>
-  <body>
+  <body id="map_body">
     <nav id="nav01"></nav>
     <script>
         document.getElementById("nav01").innerHTML = "<ul id='menu'>" + "<li><a href='index.html'>Home</a></li>" + "<li><a href='about.html'>About Us</a></li>" + "<li><a href='map.html'>Map</a></li>" + "<li><a href='plan.html'>Book a Trip</a></li>" + "</ul>";
     </script>
+    
     <div id="map"></div>
     <script>
       function initMap() {

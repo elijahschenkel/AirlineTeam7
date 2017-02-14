@@ -55,3 +55,12 @@ ul#menu li a:hover {
     background-color: DarkBlue;
 }
 
+#map {
+    height: 100%;
+}
+
+#map_html, #map_body {
+    height: 90%;
+    margin: 15px;
+    padding: 0;
+}
