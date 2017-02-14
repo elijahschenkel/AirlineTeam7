@@ -21,6 +21,10 @@ p{
     text-align: center;
 }
 
+#form {
+    text-align: center;
+}
+
 ul#menu {
     margin: auto;
     width: auto;
@@ -46,4 +50,3 @@ ul#menu li a:hover {
     color: white;
     background-color: DarkBlue;
 }
-
