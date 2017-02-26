@@ -45,4 +45,4 @@ SET FOREIGN_KEY_CHECKS=1
 
 /* Insert login info */
 
-INSERT INTO 'User' ('username', 'email', 'password') VALUES ('myuser', 'myemai@domain.com', 'mypassword')
+INSERT INTO 'User' ('username','password') VALUES ('myuser','mypassword');
