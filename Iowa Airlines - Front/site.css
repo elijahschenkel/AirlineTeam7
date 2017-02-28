@@ -65,3 +65,27 @@ ul#menu li a:hover {
     padding: 0;
 }
 
+#Sign-Up{ 
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 16px;
+    background-color: AliceBlue; 
+    color: black;
+    padding: 5px;
+    padding-left:  15px;
+    padding-right: 15px;
+    border-radius: 0 0 5px 5px;
+    margin: auto;
+    width: auto;
+   
+} 
+
+#button{ 
+    border-radius:10px; 
+    width:60px; 
+    height:25px;  
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 10x;
+    background-color: darkblue; 
+    color: aliceblue;
+    padding: 5px;
+}
