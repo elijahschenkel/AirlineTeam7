@@ -10,11 +10,11 @@
     
     <div id="main">
         <h2>Please login to book a flight!</h2>
-        <form id="form">
-            <input type="text" placeholder="Username" name="username" id="username"/>
-            <input type="password" placeholder="Password" name="password" id="password"/>
-            <input type="submit" value="Login" onclick="login_validation()"/>
-            <input type="submit" value="Forgot Password" onclick="change_user_password()"/>
+        <form method="POST" action="login.php">
+            <input type="text" placeholder="Username" name="user" id="username"/>
+            <input type="password" placeholder="Password" name="pass" id="password"/>
+            <input type="submit" name="submit" value="Login"/>
+            <input type="submit" name="forgot" value="Forgot Password"/>
         </form>
     
     <nav id="from01"></nav> 
