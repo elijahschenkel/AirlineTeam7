@@ -9,9 +9,12 @@
     <title>Where would you like to go?</title>
   </head>
   <body id="map_body">
+    <nav id="navLogin"></nav>
     <nav id="nav01"></nav>
     <script>
-        document.getElementById("nav01").innerHTML = "<ul id='menu'>" + "<li><a href='index.html'>Home</a></li>" + "<li><a href='about.html'>About Us</a></li>" + "<li><a href='map.html'>Map</a></li>" + "<li><a href='plan.html'>Book a Trip</a></li>" + "</ul>";
+        document.getElementById("navLogin").innerHTML = "<ul id='login'>" + "<li><a href='login.html'>Log In</a></li>" + "</ul>";
+
+        document.getElementById("nav01").innerHTML = "<ul id='menu'>" + "<li><a href='index.html'>Home</a></li>" + "<li><a href='about.html'>About Us</a></li>" + "<li><a href='book.html'>Book Flight</a></li>" + "<li><a href='create.html'>Create an Account</a></li>" + "</ul>";
     </script>
     
     <div id="map"></div>
@@ -50,7 +53,9 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6lmjWwnpESQhMSnu9pya3D6kQnyrpED4&callback=initMap">
     </script>
+      
     <script src="script.js"></script>
-    <p id="p_right">Currently, we fly non-stop from Cedar Rapids to Chicago, Minneapolis, Detroit, Kansas City, and Dallas.</p>
+      
+    <p>Currently, we fly non-stop from Cedar Rapids to Chicago, Minneapolis, Detroit, Kansas City, and Dallas.</p>
   </body>
 </html>

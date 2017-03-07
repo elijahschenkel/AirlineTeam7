@@ -9,6 +9,7 @@ $con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to My
 $db=mysqli_select_db($con, DB_NAME) or die("Failed to connect to MySQL: " . mysqli_connect_error()); 
 
 function NewUser(mysqli $con) {
+    session_start();
 	$fullname = $_POST['name'];
 	$userName = $_POST['user'];
 	$email = $_POST['email'];
@@ -26,7 +27,7 @@ function SignUp(mysqli $con){
 	   $query = mysql_query("SELECT * FROM userName WHERE userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysqli_connect_error());
 
 	   if(!$row = mysql_fetch_array($query) or die(mysqli_connect_error())) {
-		  newuser($con);
+		  NewUser($con);
 	   }
 	   else {
            echo "This account is already registered";

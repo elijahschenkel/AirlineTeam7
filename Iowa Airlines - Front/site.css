@@ -1,4 +1,5 @@
-body {
+/* Index.html */
+#body-main {
     font-family: "Trebuchet MS", Verdana, sans-serif;
     font-size: 16px;
     background-color: AliceBlue; 
@@ -17,21 +18,19 @@ h2 {
     text-align: center;
 }
 
-p{ 
-    text-align: center;
+img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 5px;
+    border: 10px solid black;
 }
 
-#p_right{
-    text-align: left;
-}
-
-#form {
-    text-align: center;
-}
-
+/* Javascript Tabs */
 ul#menu {
-    margin: auto;
-    width: auto;
+    margin: 0 auto;
+    width: 0 auto;
     padding: 10px;
     margin-bottom: 11px;
 }
@@ -55,6 +54,39 @@ ul#menu li a:hover {
     background-color: DarkBlue;
 }
 
+ul#login {
+    margin: auto;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 11px;
+}
+
+ul#login li {
+    display: inline;
+    margin-right: 3px;
+    
+}
+
+ul#login li a {
+    background-color: AliceBlue;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #696969;
+    border-radius: 20px 20px 20px 20px;
+}
+
+ul#login li a:hover {
+    color: white;
+    background-color: DarkBlue;
+}
+
+#foot01 {
+    position: relative;
+    bottom:0;
+    left:0;
+}
+
+/* Book Trip */
 #map {
     height: 100%;
 }
@@ -63,29 +95,58 @@ ul#menu li a:hover {
     height: 90%;
     margin: 15px;
     padding: 0;
-}
-
-#Sign-Up{ 
+    background-color: aliceblue; 
     font-family: "Trebuchet MS", Verdana, sans-serif;
     font-size: 16px;
-    background-color: AliceBlue; 
     color: black;
-    padding: 5px;
-    padding-left:  15px;
-    padding-right: 15px;
-    border-radius: 0 0 5px 5px;
-    margin: auto;
-    width: auto;
-   
+}
+
+
+/* Login & Create Account */ 
+#body-color { 
+    background-color: aliceblue; 
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    padding: 3px;
+} 
+
+#Sign-In { 
+    margin: 0 auto;
+    border:3px solid #a1a1a1; 
+    padding:9px 35px; 
+    background: lightgray; 
+    width:285px; 
+    border-radius:20px; 
+    box-shadow: 7px 7px 6px; 
+} 
+
+#Sign-In { 
+    margin: 0 auto;
+    border:3px solid #a1a1a1; 
+    padding:9px 35px; 
+    background: lightgray; 
+    width:285px; 
+    border-radius:20px; 
+    box-shadow: 7px 7px 6px; 
+} 
+
+#Sign-Up { 
+    margin: 0 auto;
+    border:3px solid #a1a1a1; 
+    padding:9px 35px; 
+    background: lightgray; 
+    width:285px; 
+    border-radius:20px; 
+    box-shadow: 7px 7px 6px; 
 } 
 
 #button{ 
-    border-radius:10px; 
-    width:60px; 
-    height:25px;  
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    font-size: 10x;
-    background-color: darkblue; 
-    color: aliceblue;
-    padding: 5px;
+    border-radius:0px; 
+    width:65px; 
+    height:24px; 
+    background: aliceblue; 
+    font-weight:bold; 
+    font-size:12px 
 }
+
