@@ -827,6 +827,7 @@
 	input[type="reset"],
 	input[type="button"],
     input[type="login"],
+    input[type="radio"],
 	button,
 	.button {
 		-moz-appearance: none;
@@ -861,6 +862,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
         input[type="login"]:hover,
+        input[type="radio"]:hover,
 		button:hover,
 		.button:hover {
 			background-color: rgba(255, 255, 255, 0);
@@ -870,6 +872,7 @@
 		input[type="reset"]:active,
 		input[type="button"]:active,
         input[type="login"]:active,
+        input[type="radio"]:active,
 		button:active,
 		.button:active {
 			background-color: rgba(255, 255, 255, 0);
@@ -879,6 +882,7 @@
 		input[type="reset"].icon:before,
 		input[type="button"].icon:before,
         input[type="login"].icon:before,
+        input[type="radio"].icon:before,
 		button.icon:before,
 		.button.icon:before {
 			margin-right: 0.5em;
@@ -888,6 +892,7 @@
 		input[type="reset"].fit,
 		input[type="button"].fit,
         input[type="login"].fit,
+        input[type="radio"].fit,
 		button.fit,
 		.button.fit {
 			display: block;
@@ -899,6 +904,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
         input[type="login"].special,
+        input[type="radio"].sepcial,
 		button.special,
 		.button.special {
 			background-color: #ffffff;
@@ -914,6 +920,8 @@
 		input[type="button"]:disabled,
         input[type="login"].disabled,
         input[type="login"]:disabled,
+        input[type="radio"].disabled,
+        input[type="radio"]:disabled,
 		button.disabled,
 		button:disabled,
 		.button.disabled,
@@ -930,6 +938,7 @@
 	input[type="reset"],
 	input[type="button"],
     input[type="login"],
+    input[type="radio"],
 	button {
 		line-height: calc(2.75rem - 2px);
 	}
