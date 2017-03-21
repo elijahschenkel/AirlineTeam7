@@ -10,19 +10,19 @@ DROP TABLE IF EXISTS `UserName` CASCADE
 
 CREATE TABLE `UserName` (
     UserNameID INT(9) NOT NULL AUTO_INCREMENT,
-    fullname VARCHAR(40) NOT NULL,
-    userName VARCHAR(40) NOT NULL,
-    email VARCHAR(100) NOT NULL,
+    
+    user VARCHAR(40) NOT NULL,
+    
     pass VARCHAR(40) NOT NULL,
     PRIMARY KEY (UserNameID)
 );
 
 INSERT INTO
-UserName (fullname, userName, pass, email)
+UserName (user, pass)
 VALUE
-("My User","myuser","mypassword","myuser@email.com");
+("myuser","mypassword");
 
 INSERT INTO
-UserName (fullname, userName, pass, email)
+UserName (user, pass)
 VALUE
-("Test User","test","password","test@email.com");
+("test","password");
