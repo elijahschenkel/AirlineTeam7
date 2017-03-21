@@ -1,9 +1,3 @@
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	skel.breakpoints({
@@ -33,43 +27,41 @@
 					$body.removeClass('is-loading');
 				}, 100);
 			});
-
-		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Fix: Flexbox min-height bug on IE.
-			if (skel.vars.IEVersion < 12) {
-
-				var flexboxFixTimeoutId;
-
-				$window.on('resize.flexbox-fix', function() {
-
-					clearTimeout(flexboxFixTimeoutId);
-
-					flexboxFixTimeoutId = setTimeout(function() {
-
-						if ($wrapper.prop('scrollHeight') > $window.height())
-							$wrapper.css('height', 'auto');
-						else
-							$wrapper.css('height', '100vh');
-
-					}, 250);
-
-				}).triggerHandler('resize.flexbox-fix');
-
-			}
+//		// Fix: Flexbox min-height bug on IE.
+//			if (skel.vars.IEVersion < 12) {
+//
+//				var flexboxFixTimeoutId;
+//
+//				$window.on('resize.flexbox-fix', function() {
+//
+//					clearTimeout(flexboxFixTimeoutId);
+//
+//					flexboxFixTimeoutId = setTimeout(function() {
+//
+//						if ($wrapper.prop('scrollHeight') > $window.height())
+//							$wrapper.css('height', 'auto');
+//						else
+//							$wrapper.css('height', '100vh');
+//
+//					}, 250);
+//
+//				}).triggerHandler('resize.flexbox-fix');
+//
+//			}
 
 		// Nav.
 			var $nav = $header.children('nav'),
 				$nav_li = $nav.find('li');
 
 			// Add "middle" alignment classes if we're dealing with an even number of items.
-				if ($nav_li.length % 2 == 0) {
-
-					$nav.addClass('use-middle');
-					$nav_li.eq( ($nav_li.length / 2) ).addClass('is-middle');
-
-				}
+//				if ($nav_li.length % 2 == 0) {
+//
+//					$nav.addClass('use-middle');
+//					$nav_li.eq( ($nav_li.length / 2) ).addClass('is-middle');
+//
+//				}
 
 		// Main.
 			var	delay = 325,
@@ -80,11 +72,8 @@
 
 					var $article = $main_articles.filter('#' + id);
 
-					// No such article? Bail.
 						if ($article.length == 0)
 							return;
-
-					// Handle lock.
 
 						// Already locked? Speed through "show" steps w/o delays.
 							if (locked || (typeof initial != 'undefined' && initial === true)) {
