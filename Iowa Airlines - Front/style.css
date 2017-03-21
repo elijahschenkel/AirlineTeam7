@@ -373,6 +373,7 @@
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
+        input[type="date"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -382,6 +383,7 @@
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
+        input[type="date"]:focus,
 		select:focus,
 		textarea:focus {
 			background: rgba(255, 255, 255, 0.075);
@@ -430,6 +432,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+    input[type="date"],
 	select {
 		height: 2.75rem;
 	}
@@ -937,6 +940,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
+    input[type="login"],
 	button,
 	.button {
 		-moz-appearance: none;
@@ -970,6 +974,7 @@
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
+        input[type="login"]:hover,
 		button:hover,
 		.button:hover {
 			background-color: rgba(255, 255, 255, 0.075);
@@ -978,6 +983,7 @@
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
+        input[type="login"]:active,
 		button:active,
 		.button:active {
 			background-color: rgba(255, 255, 255, 0.175);
@@ -986,6 +992,7 @@
 		input[type="submit"].icon:before,
 		input[type="reset"].icon:before,
 		input[type="button"].icon:before,
+        input[type="login"].icon:before,
 		button.icon:before,
 		.button.icon:before {
 			margin-right: 0.5em;
@@ -994,6 +1001,7 @@
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
+        input[type="login"].fit,
 		button.fit,
 		.button.fit {
 			display: block;
@@ -1004,6 +1012,7 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		input[type="button"].special,
+        input[type="login"].special,
 		button.special,
 		.button.special {
 			background-color: #ffffff;
@@ -1016,6 +1025,8 @@
 		input[type="reset"]:disabled,
 		input[type="button"].disabled,
 		input[type="button"]:disabled,
+        input[type="login"].disabled,
+        input[type="login"]:disabled,
 		button.disabled,
 		button:disabled,
 		.button.disabled,
@@ -1031,6 +1042,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
+    input[type="login"],
 	button {
 		line-height: calc(2.75rem - 2px);
 	}
