@@ -49,6 +49,29 @@
 							<article id="search">
 				                <h2 class="major">Search for Flight</h2>
                                    <span class="image main"><img src="images/flightpath.jpg"/></span>
+                                
+                                <form method="post" action="search.php">
+									<div class="field half first">
+										<label for="from">From: </label>
+										<input type="text" name="from" id="from" />
+									</div>
+									<div class="field half">
+										<label for="destination">To: </label>
+										<input type="text" name="dest" id="dest" />
+									</div>
+                                    <div class="field half first">
+										<label for="depart_date">Departure Date: </label>
+										<input type="date" name="dep_date" id="dep_date" />
+									</div>
+									<div class="field half">
+										<label for="return_date">Return Date: </label>
+										<input type="date" name="ret_date" id="ret_date" />
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
                                     
                                  
 							</article>
