@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="be532d2a-556a-4209-9079-c48392881cce" name="IowaAirlines" url="http://localhost:80">
+        <fileTransfer port="0" mountedRoot="/Applications/XAMPP/xamppfiles/apache2/htdocs" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
