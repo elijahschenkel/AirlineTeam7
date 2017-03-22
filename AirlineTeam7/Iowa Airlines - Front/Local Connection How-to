@@ -1,0 +1,4 @@
+local connection how-to
+
+1. Start MySQL server (settings --> mySQL, mySQL Workbench --> open FSE Server connection)
+2. Open local socket (command line: go to directory with files then run command: php -S 127.0.0.1:8000)
