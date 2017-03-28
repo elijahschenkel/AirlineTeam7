@@ -2,32 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e936a98e-f149-4f20-9c86-cde48fdbf761" name="Default" comment="Commit from RJ.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/Flight Seats/big_flight_seats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/Flight Seats/med_flight_seats.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/Flight Seats/small_flight_seats.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/airline_programs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/cabin.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/cabin2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/invalid_login.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/login_create.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/plane.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/plane2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/terminal.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/terminal_vert.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/turbine.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/where_will_you_go.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/book.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/create.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/site.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/userDB.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MAIN/MAIN.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MAIN/src/test.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/Thumbs.db" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/bg.jpg" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/create_account.jpg" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/create_account.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/flightpath.jpg" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/flightpath.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/login.png" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/login.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/x.png" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/Images/x.svg" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/Images/x.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/HELP-US-OUT.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/animated.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/core.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/icons.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/larger.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/list.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/mixins.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/path.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/screen-reader.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/screen-reader.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/stacked.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/variables.less" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_animated.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_core.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_list.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_path.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_screen-reader.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/font-awesome-4.7.0/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/jquery.min.js" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/main.js" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/skel.min.js" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/skel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/util.js" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/js/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/base/_page.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/base/_page.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/base/_typography.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/base/_typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_box.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_button.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_button.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_form.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_form.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_icon.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_icon.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_image.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_image.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_list.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_table.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/components/_table.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/ie9.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/ie9.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_bg.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_bg.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_footer.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_footer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_header.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_main.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_wrapper.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/layout/_wrapper.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_functions.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_functions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_mixins.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_skel.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_skel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_vars.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/libs/_vars.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/main.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/noscript.scss" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/assets/sass/noscript.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Iowa Airlines - Front/style.css" afterPath="$PROJECT_DIR$/Iowa Airlines - Front/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +100,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AirlineTeam7/Iowa Airlines - Front/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="420">
+              <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -107,7 +151,7 @@
         <entry file="file://$PROJECT_DIR$/AirlineTeam7/Iowa Airlines - Front/testMail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -780,12 +824,12 @@
       <workItem from="1487289174563" duration="2599000" />
       <workItem from="1487539569817" duration="8040000" />
       <workItem from="1488494879593" duration="483000" />
-      <workItem from="1489092276194" duration="569000" />
+      <workItem from="1489092276194" duration="938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11840000" />
+    <option name="totallyTimeSpent" value="12209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,7 +842,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="33" width="1390" height="790" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -809,14 +853,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33009708" sideWeight="0.50251615" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32808024" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32808024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32808024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25667655" sideWeight="0.4752066" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19287834" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19287834" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1096,8 +1140,8 @@
     <entry file="file://$PROJECT_DIR$/AirlineTeam7/Iowa Airlines - Front/PreLab#3" />
     <entry file="file://$PROJECT_DIR$/AirlineTeam7/Iowa Airlines - Front/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="420">
+          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1113,7 +1157,7 @@
     <entry file="file://$PROJECT_DIR$/AirlineTeam7/Iowa Airlines - Front/testMail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding />
         </state>
       </provider>
