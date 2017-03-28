@@ -1,5 +1,4 @@
 <?php
-    // turn error reporting on, it makes life easier if you make typo in a variable name etc
     error_reporting(E_ALL);
 
     session_start();
@@ -44,17 +43,15 @@
 
     if ( !$loggedIn )
     {
-        echo "
-                <form action='logmein.php' method='post'>
-                    Name: <input type='text' name='name' value='$userName'><br>
-                    Password: <input type='password' name='pass' value='$userPass'><br>
-                    <input type='submit' value='log in'>
-                </form>
-            ";
+        echo '<script type="text/javascript">
+            window.location = "index.html#login_unsuccessful"
+        </script>';
     }
+
     else{
         echo "<div>";
         echo "You have been logged in as $userName!";
         echo "</div>";
         $_SESSION["name"] = $userName;
     }
+?>

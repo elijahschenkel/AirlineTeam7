@@ -225,6 +225,28 @@
 								</form>
 							</article>	
                         
+                        <!-- Unsuccessful Login -->
+                        <article id="login_unsuccessful">
+								<h1>UH-OH!!</h1>
+                                <h3 class="major">Check your password or username!</h3>
+                                <span class="image main"><img src="images/invalid_login.jpg"/></span>
+								<form method="post" action="login.php">
+									<div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Login" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                        <li><a href="#forgot">Forgot Password</a></li>
+									</ul>
+								</form>
+							</article>	
+                        
                         <!-- Email Verification -->
                             <article id="verify">
                                     <h2 class="major">Email Verification</h2>
@@ -243,15 +265,6 @@
                                 <span class="image main"><img src="images/create_account.jpg">
                                 </span>
                                 <form method="post" action="create.php">
-                                    <div class="field half first">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" id="name"/>
-                                    </div>
-                                    <div class="field half">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email"/>
-                                    </div>
-                                    
                                     <div class="field half first">
 										<label for="username">Username</label>
 										<input type="text" name="user" id="user" />

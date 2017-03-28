@@ -1,42 +1,38 @@
-<?php 
-define('DB_HOST', '127.0.0.1'); 
-define('DB_NAME', 'user'); 
-define('DB_USER','Airline7'); 
-define('DB_PASSWORD','Airline'); 
+<?php
+    // turn error reporting on, it makes life easier if you make typo in a variable name etc
+    error_reporting(E_ALL);
 
-$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysqli_connect_error()); 
-
-$db=mysqli_select_db($con, DB_NAME) or die("Failed to connect to MySQL: " . mysqli_connect_error()); 
-
-function NewUser(mysqli $con) {
     session_start();
-	$fullname = $_POST['name'];
-	$userName = $_POST['user'];
-	$email = $_POST['email'];
-	$password =  $_POST['pass'];
-	$query = "INSERT INTO userName (fullname,userName,pass,email) VALUES ('$fullname','$userName','$password','$email')";
-    $data = mysqli_query($query)or die(mysqli_connect_error());
-	if($data) {
-	   echo "YOUR REGISTRATION IS COMPLETED...";
-	}
-}
 
-function SignUp(mysqli $con){
-    session_start();
-    if(!empty($_POST['user'])) {
-	   $query = mysql_query("SELECT * FROM userName WHERE userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysqli_connect_error());
+    //Start Database
+    $IP = "127.0.0.1";
+    $user = "root";
+    $pass = "leonidas";
+    $db = "Airline_Users";
+    $con = mysqli_connect($IP, $user, $pass, $db);
 
-	   if(!$row = mysql_fetch_array($query) or die(mysqli_connect_error())) {
-		  NewUser($con);
-	   }
-	   else {
-           echo "This account is already registered";
-	   }
+    // Check connection
+    if (!$con) {
+        echo "<div>";
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        echo "</div>";
     }
-}
 
-if(isset($_POST['submit'])) {
-	SignUp($con);
-}
+    $username = $_POST['user'];
+    $password = $_POST['pass'];
+
+    $query = "INSERT INTO user(username,password) VALUE ('$username','$password')";
+
+    $result = mysqli_query( $con, $query);
+
+    //$row = mysqli_fetch_array($result);
+
+    if(!$result) {
+        echo "rurow";
+    }
+
+    else {
+        echo "YOUR REGISTRATION IS COMPLETED...";
+    }
 
 ?>
