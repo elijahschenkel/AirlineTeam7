@@ -220,6 +220,7 @@
 									<ul class="actions">
 										<li><input type="submit" value="Login" class="special" /></li>
 										<li><input type="reset" value="Reset" /></li>
+                                        <li><a href="#forgot">Forgot Password</a></li>
 									</ul>
 								</form>
 							</article>	
@@ -241,7 +242,6 @@
                                 <h2 class="major">Create an Account</h2>
                                 <span class="image main"><img src="images/create_account.jpg">
                                 </span>
-                                <h2 class="major">Create Account</h2>
                                 <form method="post" action="create.php">
                                     <div class="field half first">
                                         <label for="name">Name</label>
@@ -266,6 +266,26 @@
 									</ul>
                                 </form>
                             
+                            </article>
+                        
+                        <!-- Forgot Password -->
+                            <article id="forgot">
+                                <h2 class="major">Forgot Password</h2>
+                                <span class="image main"><img src="Images/invalid_login.jpg"></span>
+                                <form method="post" action="forgot.php">
+                                    <div class="field half first">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="user_fp" id="username_fp" />
+                                    </div>
+                                    <div class="field half">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email_fp" id="email_fp" />
+                                    </div>
+                                        <ul class="actions">
+                                            <li><input type="submit" value="Submit" class="special" /></li>
+								            <li><input type="reset" value="Reset" /></li>
+                                        </ul>
+                                </form>
                             </article>
 
 					</div>

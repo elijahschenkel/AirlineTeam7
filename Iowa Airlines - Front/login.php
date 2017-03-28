@@ -1,40 +1,60 @@
-<?php 
+<?php
+    // turn error reporting on, it makes life easier if you make typo in a variable name etc
+    error_reporting(E_ALL);
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'user');
-define('DB_USER','root'); 
-define('DB_PASSWORD','12'); 
+    session_start();
 
-$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME); 
+    //Start Database
+    $IP = "127.0.0.1";
+    $user = "root";
+    $pass = "leonidas";
+    $db = "Airline_Users";
+    $con = mysqli_connect($IP, $user, $pass, $db);
 
-if (mysqli_connect_errno())
-  {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-
-$db=mysqli_select_db($con,DB_NAME); 
-
-function SignIn(mysqli $con) { 
-    session_start(); 
-    if(!empty($_POST['user'])) { 
-        $query = mysqli_query("SELECT * FROM UserName where userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysqli_error()); 
-        $row = mysqli_fetch_array($query) or die(mysqli_error()); 
-        
-        if(!is_null($row['userName']) AND !empty($row['pass'])) { 
-            $_SESSION['userName'] = $row['pass']; 
-            echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE..."; 
-        } 
-        else {
-            echo "SORRY... YOU ENTERED WRONG ID OR PASSWORD... PLEASE RETRY"; 
-        } 
-    } 
-    else {
-        echo "PLEASE ENTER A VALID USERNAME";
+    // Check connection
+    if (!$con) {
+        echo "<div>";
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        echo "</div>";
     }
-}
 
-if(isset($_POST['submit'])) { 
-        SignIn($con); 
-    } 
-?>
+    $loggedIn = false;
 
+    $userName = isset($_POST["user"]) ? $_POST["user"] : null;
+
+    $userPass = isset($_POST["pass"]) ? $_POST["pass"] : null;
+
+    if ($userName && $userPass )
+    {
+        $query = "SELECT username FROM user WHERE username = '$userName' AND password = '$userPass'";
+
+        $result = mysqli_query( $con, $query);
+
+        $row = mysqli_fetch_array($result);
+
+        if(!$row){
+            echo "<div>";
+            echo "No existing user or wrong password.";
+            echo "</div>";
+        }
+        else {
+            $loggedIn = true;
+        }
+    }
+
+    if ( !$loggedIn )
+    {
+        echo "
+                <form action='logmein.php' method='post'>
+                    Name: <input type='text' name='name' value='$userName'><br>
+                    Password: <input type='password' name='pass' value='$userPass'><br>
+                    <input type='submit' value='log in'>
+                </form>
+            ";
+    }
+    else{
+        echo "<div>";
+        echo "You have been logged in as $userName!";
+        echo "</div>";
+        $_SESSION["name"] = $userName;
+    }
