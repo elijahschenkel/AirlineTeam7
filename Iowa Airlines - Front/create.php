@@ -17,6 +17,8 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         echo "</div>";
     }
+    
+    // Enhancements: check for existing username, existing email
 
     $username = isset($_POST["user"]) ? $_POST["user"] : null;
 
@@ -38,8 +40,11 @@
             echo "hmm";
         }
 
+        // Enhancement: redirect to homepage with "Welcome, [user]" header
         else {
-            echo "YOUR REGISTRATION IS COMPLETED...";
+            echo '<script type="text/javascript">
+            window.location = "index.html#create_successful"
+        </script>';
         }
     }
     

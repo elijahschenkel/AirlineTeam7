@@ -49,9 +49,8 @@
     }
 
     else{
-        echo "<div>";
-        echo "You have been logged in as $userName!";
-        echo "</div>";
-        $_SESSION["name"] = $userName;
+         echo '<script type="text/javascript">
+            window.location = "index.html#login_successful"
+        </script>';
     }
 ?>
