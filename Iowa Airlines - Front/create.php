@@ -18,21 +18,36 @@
         echo "</div>";
     }
 
-    $username = $_POST['user'];
-    $password = $_POST['pass'];
+    $username = isset($_POST["user"]) ? $_POST["user"] : null;
 
-    $query = "INSERT INTO user(username,password) VALUE ('$username','$password')";
+    $password = isset($_POST["pass"]) ? $_POST["pass"] : null;
 
-    $result = mysqli_query( $con, $query);
+    $firstname = isset($_POST["fn"]) ? $_POST["fn"] : null;
 
-    //$row = mysqli_fetch_array($result);
+    $lastname = isset($_POST["ln"]) ? $_POST["ln"] : null;
 
-    if(!$result) {
-        echo "rurow";
+    $email = isset($_POST["email"]) ? $_POST["email"] : null;
+
+    if ($username && $password && $firstname && $lastname && $email){
+
+        $query = "INSERT INTO user(username,password,firstname,lastname,email) VALUE ('$username','$password','$firstname','$lastname','$email')";
+
+        $result = mysqli_query( $con, $query);
+
+        if(!$result) {
+            echo "hmm";
+        }
+
+        else {
+            echo "YOUR REGISTRATION IS COMPLETED...";
+        }
     }
-
+    
     else {
-        echo "YOUR REGISTRATION IS COMPLETED...";
+        echo "Please complete form";
+         echo '<script type="text/javascript">
+            window.location = "index.html#create_unsuccessful"
+        </script>';
     }
 
 ?>
