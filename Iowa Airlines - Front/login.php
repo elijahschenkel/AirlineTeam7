@@ -49,8 +49,15 @@
     }
 
     else{
-         echo '<script type="text/javascript">
+        if($userName == "admin"){
+            echo '<script type="text/javascript">
+            window.location = "index.html#admin_login"
+            </script>';
+        }
+        else {
+            echo '<script type="text/javascript">
             window.location = "index.html#login_successful"
-        </script>';
+            </script>';
+        }
     }
 ?>
