@@ -6,8 +6,8 @@
 
     //Start Database
     $IP = "127.0.0.1";
-    $user = "root";
-    $pass = "leonidas";
+    $user = "FSE";
+    $pass = "airline";
     $db = "Airline_Users";
     $con = mysqli_connect($IP, $user, $pass, $db);
 
