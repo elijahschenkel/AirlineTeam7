@@ -1333,6 +1333,8 @@
 
 		}
 
+
+
 /* Main */
 
 	#main {
@@ -1453,3 +1455,88 @@
 			}
 
 		}
+    #main nav ul {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: flex;
+            
+			margin-bottom: 0;
+			list-style: none;
+			padding-left: 0;
+			border: solid 1px #ffffff;
+			border-radius: 4px;
+		}
+
+			#main nav ul li {
+				padding-left: 0;
+				border-left: solid 1px #ffffff;
+			}
+
+				#main nav ul li:first-child {
+					border-left: 0;
+				}
+
+				#main nav ul li a {
+					display: block;
+					min-width: 7.5rem;
+					height: 2.75rem;
+					line-height: 2.75rem;
+					padding: 0 1.25rem 0 1.45rem;
+					text-transform: uppercase;
+					letter-spacing: 0.2rem;
+					font-size: 0.8rem;
+					border-bottom: 0;
+				}
+
+					#main nav ul li a:hover {
+						background-color: rgba(255, 255, 255, 0.075);
+					}
+
+					#main nav ul li a:active {
+						background-color: rgba(255, 255, 255, 0.175);
+					}
+
+		#main nav.use-middle:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: calc(50% - 1px);
+			width: 1px;
+			height: 100%;
+			background: #ffffff;
+		}
+
+		#main nav.use-middle ul li.is-middle {
+			border-left: 0;
+		}
+
+
+        #main nav ul {
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					flex-direction: column;
+                    
+					min-width: 10rem;
+					max-width: 100%;
+				}
+
+					#main nav ul li {
+						border-left: 0;
+						border-top: solid 1px #ffffff;
+					}
+
+						#main nav ul li:first-child {
+							border-top: 0;
+						}
+
+						#main nav ul li a {
+							height: 3rem;
+							line-height: 3rem;
+							min-width: 0;
+							width: 100%;
+						}
+
+				#main nav.use-middle:after {
+					display: none;
+				}

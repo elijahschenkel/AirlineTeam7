@@ -5,8 +5,8 @@
 
     //Start Database
     $IP = "127.0.0.1";
-    $user = "root";
-    $pass = "leonidas";
+    $user = "FSE";
+    $pass = "airline";
     $db = "Airline_Users";
     $con = mysqli_connect($IP, $user, $pass, $db);
 
@@ -43,7 +43,7 @@
             echo "hmm";
             }
 
-        // Enhancement: redirect to homepage with "Welcome, [user]" header
+        // Enhancement: redirect to reset password email 
             else {
                 echo '<script type="text/javascript">
                     window.location = "index.html#reset_successful"
