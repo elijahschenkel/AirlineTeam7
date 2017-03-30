@@ -93,12 +93,26 @@
                                     </div>
                                     
 									<div class="field half first">
-										<label for="from">From: </label>
-										<input type="text" name="from" id="from" />
+										<label for="from">From: </label><select name="from">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
 									</div>
 									<div class="field half">
-										<label for="destination">To: </label>
-										<input type="text" name="dest" id="dest" />
+										<label for="destination">From: </label><select name="dest">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
 									</div>
                                     <div class="field half first">
 										<label for="depart_date">Departure Date: </label>
@@ -160,12 +174,26 @@
                                     </div>
                                     
 									<div class="field half first">
-										<label for="from">From: </label>
-										<input type="text" name="from" id="from" />
+										<label for="from">From: </label><select name="from">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
 									</div>
 									<div class="field half">
-										<label for="destination">To: </label>
-										<input type="text" name="dest" id="dest" />
+										<label for="destination">To: </label><select name="dest">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
 									</div>
                                     <div class="field half first">
 										<label for="depart_date">Departure Date: </label>
@@ -220,26 +248,64 @@
 									<ul class="actions">
 										<li><input type="submit" value="Login" class="special" /></li>
 										<li><input type="reset" value="Reset" /></li>
+                                        <li><a href="#forgot">Forgot Password</a></li>
 									</ul>
 								</form>
 							</article>	
+                        
+                        <!-- Unsuccessful Login -->
+                        <article id="login_unsuccessful">
+								<h1>UH-OH!!</h1>
+                                <h3 class="major">Check your password or username!</h3>
+                                <span class="image main"><img src="images/invalid_login.jpg"/></span>
+								<form method="post" action="login.php">
+									<div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Login" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                        <li><a href="#forgot">Forgot Password</a></li>
+									</ul>
+								</form>
+							</article>	
+                        
+                        <!-- Successful Login -->
+                        <article id="login_successful">
+								<h1 class="major">Cheers!</h1>
+                                <h2>Login successful</h2>
+                                <span class="image main"><img src="images/cheer.jpeg"/></span>
+                        </article>
+                        
+                        <!-- Successful Login -->
+                        <article id="admin_login">
+								<h2 class="major">Welcome Airline Master!</h2>
+                                <span class="image main"><img src="images/admin.jpeg"/></span>
+                        </article>
+                        
+                        <!-- Email Verification -->
+                            <article id="verify">
+                                    <h2 class="major">Email Verification</h2>
+                                    <p>Thank you for registering with Iowa Airlines.
+                                
+                                    Your email address has been confirmed and you are now able to login and book trips.
+                                
+                                    Happy Flying!</p>
+                                
+                                    <span class="image main"><img src="images/sky.jpg"/></span>
+                                </article>
                         
                         <!-- Create Account -->
                             <article id="create">
                                 <h2 class="major">Create an Account</h2>
                                 <span class="image main"><img src="images/create_account.jpg">
                                 </span>
-                                <h2 class="major">Create Account</h2>
                                 <form method="post" action="create.php">
-                                    <div class="field half first">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" id="name"/>
-                                    </div>
-                                    <div class="field half">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email"/>
-                                    </div>
-                                    
                                     <div class="field half first">
 										<label for="username">Username</label>
 										<input type="text" name="user" id="user" />
@@ -248,13 +314,95 @@
 										<label for="password">Password</label>
 										<input type="password" name="pass" id="pass" />
 									</div>
+                                    <div class="field half first">
+										<label for="firstname">First Name</label>
+										<input type="text" name="fn" id="fn" />
+									</div>
+									<div class="field half">
+										<label for="lastname">Last Name</label>
+										<input type="text" name="ln" id="ln" />
+									</div>
+                                    <div class="field half first">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+                                    <br>
+                            
                                     <ul class="actions">
 										<li><input type="submit" value="Submit" class="special" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+                                    </div>
                                 </form>
-                            
                             </article>
+                        
+                        <!-- Unsuccessful Create -->
+                        <article id="create_unsuccessful">
+								<h1>UH-OH!!</h1>
+                                <h3 class="major">All fields required!</h3>
+                                <span class="image main"><img src="images/invalid_login.jpg"/></span>
+								<form method="post" action="create.php">
+                                    <div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+                                    <div class="field half first">
+										<label for="firstname">First Name</label>
+										<input type="text" name="fn" id="fn" />
+									</div>
+									<div class="field half">
+										<label for="lastname">Last Name</label>
+										<input type="text" name="ln" id="ln" />
+									</div>
+                                    <div class="field half first">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+                                    <br>
+                            
+                                    <ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+                                    </div>
+                                </form>
+							</article>	
+                        
+                        <!-- Successful Create -->
+                        <article id="create_successful">
+								<h1 class="major">Cheers!</h1>
+                                <h2>You've successfully created your account!</h2>
+                                <span class="image main"><img src="images/cheer.jpeg"/></span>
+                        </article>
+                        
+                        <!-- Forgot Password -->
+                            <article id="forgot">
+                                <h2 class="major">Forgot Password</h2>
+                                <span class="image main"><img src="Images/invalid_login.jpg"></span>
+                                <form method="post" action="forgot.php">
+                                    <div class="field half first">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="user_fp" id="username_fp" />
+                                    </div>
+                                    <div class="field half">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email_fp" id="email_fp" />
+                                    </div>
+                                        <ul class="actions">
+                                            <li><input type="submit" value="Submit" class="special" /></li>
+								            <li><input type="reset" value="Reset" /></li>
+                                        </ul>
+                                </form>
+                            </article>
+                        
+                        <!-- Reset Successful -->
+                        <article id="reset_successful">
+								<h1 class="major">Cheers!</h1>
+                                <h2>Reset successful</h2>
+                                <span class="image main"><img src="images/cheer.jpeg"/></span>
+                        </article>
 
 					</div>
 				

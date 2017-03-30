@@ -14,5 +14,7 @@ A startup airline company “Iowa Air” has come to Iowa with Cedar Rapids as i
 
 ![alt text](https://github.com/elijahschenkel/AirlineTeam7/blob/master/Screenshots/Login.png "Landing Page")
 
+![alt text](https://github.com/elijahschenkel/AirlineTeam7/blob/master/Screenshots/Create.png "Landing Page")
+
 
 
