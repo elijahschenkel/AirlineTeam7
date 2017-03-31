@@ -43,7 +43,7 @@
             echo "hmm";
             }
 
-        // Enhancement: redirect to homepage with "Welcome, [user]" header
+        // Enhancement: redirect to reset password email 
             else {
                 echo '<script type="text/javascript">
                     window.location = "index.html#reset_successful"

@@ -282,10 +282,65 @@
                                 <span class="image main"><img src="images/cheer.jpeg"/></span>
                         </article>
                         
-                        <!-- Successful Login -->
+                        <!-- Admin Landing Page -->
                         <article id="admin_login">
 								<h2 class="major">Welcome Airline Master!</h2>
                                 <span class="image main"><img src="images/admin.jpeg"/></span>
+                                    <nav>
+                                         <ul>
+                                            <li><a href="#admin_create">Create Account</a></li>
+                                            <li><a href="#admin_update">Update Flights</a></li>
+                                            <li><a href="#admin_newflight">Create New Flight</a></li>
+                                            <li><a href="#admin_issue">Issue Tracker</a></li>
+                                         </ul>
+                                    </nav>
+                        </article>
+                        
+                        <!-- Admin - Create Account -->
+                        <article id="admin_create">
+                            <h2 class="major">Create an Account</h2>
+                                <form method="post" action="admin_create.php">
+                                    <div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+                                    <div class="field half first">
+										<label for="firstname">First Name</label>
+										<input type="text" name="fn" id="fn" />
+									</div>
+									<div class="field half">
+										<label for="lastname">Last Name</label>
+										<input type="text" name="ln" id="ln" />
+									</div>
+                                    <div class="field half first">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+                                    </div>
+                                    <div class="field half">
+                                        <label for="accounttype">Account Type</label>
+                                        <input type="text" name="account" id="at"/>
+                                    </div>
+                                    <ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </form>
+                        </article>
+                        
+                        <!-- Admin - Update Flights -->
+                        <article id="admin_update">
+                        </article>
+                        
+                        <!-- Admin - Create New Flights -->
+                        <article id="admin_newflight">
+                        </article>
+                        
+                        <!-- Admin - Issue Tracker -->
+                        <article id="admin_issue">
                         </article>
                         
                         <!-- Email Verification -->
@@ -369,6 +424,42 @@
                                     </div>
                                 </form>
 							</article>	
+                        
+                         <!-- Create No -->
+                        <article id="create_no">
+								<h1>WARNING!</h1>
+                                <h3 class="major">You cannot create admin account.</h3>
+                                <span class="image main"><img src="images/dead-end-sign-cul-de-sac-hopeless-163728.jpeg"/></span>
+								<form method="post" action="create.php">
+                                    <div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+                                    <div class="field half first">
+										<label for="firstname">First Name</label>
+										<input type="text" name="fn" id="fn" />
+									</div>
+									<div class="field half">
+										<label for="lastname">Last Name</label>
+										<input type="text" name="ln" id="ln" />
+									</div>
+                                    <div class="field half first">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+                                    <br>
+                            
+                                    <ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+                                    </div>
+                                </form>
+							</article>	
+                        
                         
                         <!-- Successful Create -->
                         <article id="create_successful">

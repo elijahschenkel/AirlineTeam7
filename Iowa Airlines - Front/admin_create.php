@@ -1,4 +1,5 @@
 <?php
+    // turn error reporting on, it makes life easier if you make typo in a variable name etc
     error_reporting(E_ALL);
 
     session_start();
@@ -29,15 +30,11 @@
 
     $email = isset($_POST["email"]) ? $_POST["email"] : null;
 
-    if($username == "admin" || "Admin" || "ADMIN"){
-        echo '<script type="text/javascript">
-            window.location = "index.html#create_no"
-        </script>';
-    }
+    $account = isset($_POST["at"]) ? $_POST["at"] : null;
 
-    if ($username && $password && $firstname && $lastname && $email){
+    if ($username && $password && $firstname && $lastname && $email && $account){
 
-        $query = "INSERT INTO user(username,password,firstname,lastname,email,accounttype) VALUE ('$username','$password','$firstname','$lastname','$email','user')";
+        $query = "INSERT INTO user(username,password,firstname,lastname,email,accounttype) VALUE ('$username','$password','$firstname','$lastname','$email','$account')";
 
         $result = mysqli_query( $con, $query);
 
@@ -45,16 +42,16 @@
             echo "hmm";
         }
 
-        // Enhancement: redirect to homepage with "Welcome, [user]" header
         else {
             echo '<script type="text/javascript">
-            window.location = "index.html#create_successful"
-            </script>';
+            window.location = "index.html#admin_login"
+        </script>';
         }
     }
     
     else {
-        echo '<script type="text/javascript">
+        echo "Please complete form";
+         echo '<script type="text/javascript">
             window.location = "index.html#create_unsuccessful"
         </script>';
     }
