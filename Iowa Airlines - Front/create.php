@@ -29,12 +29,6 @@
 
     $email = isset($_POST["email"]) ? $_POST["email"] : null;
 
-    if($username == "admin" || "Admin" || "ADMIN"){
-        echo '<script type="text/javascript">
-            window.location = "index.html#create_no"
-        </script>';
-    }
-
     if ($username && $password && $firstname && $lastname && $email){
 
         $query = "INSERT INTO user(username,password,firstname,lastname,email,accounttype) VALUE ('$username','$password','$firstname','$lastname','$email','user')";
@@ -45,7 +39,7 @@
             echo "hmm";
         }
 
-        // Enhancement: redirect to homepage with "Welcome, [user]" header
+        // Enhancement: redirect to user dashboard
         else {
             date_default_timezone_set('Etc/UTC');
 
