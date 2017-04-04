@@ -288,8 +288,7 @@
                                 <span class="image main"><img src="Images/traveller.jpeg"/></span>
                                     <nav>
                                          <ul>
-                                            <li><a href="#user_search">Search Flights</a></li>
-                                            <li><a href="#user_book">Book Flights</a></li>
+                                            <li><a href="#user_search">Search and Book Flights</a></li>
                                             <li><a href="#flight_status">Flight Status</a></li>
                                             <li><a href="#user_contact">Contact Us</a></li>
                                          </ul>
@@ -298,18 +297,18 @@
                         
                         <!-- User Search Flights -->
                         <article id="user_search">
-                            <h2 class="major">Search for Flight</h2>
+                            <h2 class="major">Search and Book a Flight</h2>
                                <span class="image main"><img src="images/flightpath.jpg"/></span>
                             <form method="post" action="search.php">
                                 <div class="field half first">
-                                   <label for="travel">Ticket Type </label><select name="num_adults">
-                                        <option value="rt">Roundtrip</option>
-                                        <option value="ow">One-Way</option>
+                                   <label for="travel">Ticket Type </label><select name="ticket_type" id="tt">
+                                        <option value="rt" id="rt">Roundtrip</option>
+                                        <option value="ow" id="ow">One-Way</option>
                                     </select>
                                 </div>
 
                                 <div class="field half">
-                                    <label for="travel">Flight Preference </label><select name="flight_pref">
+                                    <label for="travel">Flight Preference </label><select name="flight_pref" id="flightpref">
                                         <option value="ns">Nonstop</option>
                                         <option value="sh">Shortest Flight</option>
                                         <option value="no">No Preference</option>
@@ -317,7 +316,7 @@
                                 </div>
 
                                 <div class="field half first">
-                                    <label for="from">From: </label><select name="from">
+                                    <label for="from">From: </label><select name="from" id="from">
                                         <option value="none"></option>
                                         <option value="Cedar Rapids">Cedar Rapids</option>
                                         <option value="Chicago">Chicago</option>
@@ -328,7 +327,7 @@
                                     </select>
                                 </div>
                                 <div class="field half">
-                                    <label for="destination">From: </label><select name="dest">
+                                    <label for="to">From: </label><select name="to" id="to">
                                         <option value="none"></option>
                                         <option value="Cedar Rapids">Cedar Rapids</option>
                                         <option value="Chicago">Chicago</option>
@@ -347,7 +346,7 @@
                                     <input type="date" name="ret_date" id="ret_date" />
                                 </div>
                                 <div class="field half first">
-                                    <label for="number_adult">Number of Adults: </label><select name="num_adults">
+                                    <label for="number_adult">Number of Adults: </label><select name="num_adults" id="num_adults">
                                         <option value="none">0</option>
                                         <option value="one">1</option>
                                         <option value="two">2</option>
@@ -358,7 +357,7 @@
                                     </select>
                                 </div>
                                 <div class="field half">
-                                    <label for="number_children">Number of Children(0-17): </label><select name="num_childs">
+                                    <label for="number_children">Number of Children(0-17): </label><select name="num_childs" id="num_childs">
                                         <option value="none">0</option>
                                         <option value="one">1</option>
                                         <option value="two">2</option>
@@ -373,10 +372,6 @@
                                     <li><input type="reset" value="Reset" /></li>
                                 </ul>
                             </form>
-                        </article>
-                        
-                        <!-- User Book Flights -->
-                        <article id="user_book">
                         </article>
                         
                         <!-- User Flight Status -->
