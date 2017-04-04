@@ -44,6 +44,40 @@
             }
 
         // Enhancement: redirect to reset password email 
+            date_default_timezone_set('Etc/UTC');
+
+            require 'PHPMailerAutoload.php';
+            
+            $mail = new PHPMailer;
+            $mail->isSMTP();
+            $mail->SMTPDebug = 2;
+            $mail->Debugoutput = 'html';
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPSecure = 'tls';
+            $mail->SMTPAuth = true;
+            
+            $mail->Username = "IowaAirlinesFSD@gmail.com";
+            $mail->Password = "Password7";
+            $mail->setFrom('IowaAirlinesFSD@gmail.com', 'Iowa Airlines Team');
+            $mail->addAddress($email, $username);
+            
+            $mail->Subject = 'Password Reset';
+            $mail->Body = 'Thank you for verifying your email.
+
+            Please click the following link to reset your password for your account:
+            http://localhost:8000/index.html#reset
+
+            You will be redirected to a reset page.';
+            $mail->addEmbeddedImage('Images/banner.jpeg','banner',
+                'banner.jpeg');
+            
+            if (!$mail->send()) {
+                echo "Mailer Error: " . $mail->ErrorInfo;
+            } else {
+                echo "Message sent!";
+            }
+
             else {
                 echo '<script type="text/javascript">
                     window.location = "index.html#reset_successful"
