@@ -38,6 +38,7 @@
         }
         else {
             $loggedIn = true;
+            session_register($userName);
         }
     }
 
@@ -54,10 +55,16 @@
             window.location = "index.html#admin_login"
             </script>';
         }
+        else if($userName == "manager"){
+            echo '<script type="text/javascript">
+            window.location = "index.html#manager_login"
+            </script>';
+        }
         else {
             echo '<script type="text/javascript">
-            window.location = "index.html#login_successful"
+            window.location = "index.html#user_login"
             </script>';
+            
         }
     }
 ?>

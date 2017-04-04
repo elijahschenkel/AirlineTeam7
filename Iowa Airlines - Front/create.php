@@ -39,7 +39,7 @@
             echo "hmm";
         }
 
-        // Enhancement: redirect to homepage with "Welcome, [user]" header
+        // Enhancement: redirect to user dashboard
         else {
             echo '<script type="text/javascript">
             window.location = "index.html#create_successful"

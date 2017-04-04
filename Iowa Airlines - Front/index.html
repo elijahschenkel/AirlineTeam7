@@ -282,6 +282,19 @@
                                 <span class="image main"><img src="images/cheer.jpeg"/></span>
                         </article>
                         
+                        <!-- User Landing Page -->
+                        <article id="user_login">
+								<h2 class="major">
+                                    <?php 
+                                        $usernm = $_SESSION['userName'];
+                                    ?>
+                                    <ul>
+                                        <li><a href="#">Welcome <?php echo $usernm; ?>!</a></li>
+                                    </ul></h2>
+                                <h2>Login successful</h2>
+                                <span class="image main"><img src="images/cheer.jpeg"/></span>
+                        </article>
+                        
                         <!-- Admin Landing Page -->
                         <article id="admin_login">
 								<h2 class="major">Welcome Airline Master!</h2>
@@ -372,6 +385,26 @@
                         
                         <!-- Admin - Issue Tracker -->
                         <article id="admin_issue">
+                        </article>
+                        
+                        <!-- Manager Landing Page -->
+                        <article id="manager_login">
+								<h2 class="major">Welcome Airline Manager!</h2>
+                                <span class="image main"><img src="images/NAVYTRP.png"/></span>
+                                    <nav>
+                                         <ul>
+                                            <li><a href="#manager_update">Update Flights</a></li>
+                                            <li><a href="#manager_issue">Issue Tracker</a></li>
+                                         </ul>
+                                    </nav>
+                        </article>
+                        
+                        <!-- Manager - Update Flights -->
+                        <article id="manager_update">
+                        </article>
+                        
+                        <!-- Manager - Issue Tracker -->
+                        <article id="manager_issue">
                         </article>
                         
                         <!-- Email Verification -->
