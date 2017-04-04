@@ -41,9 +41,39 @@
 
         // Enhancement: redirect to user dashboard
         else {
-            echo '<script type="text/javascript">
-            window.location = "index.html#create_successful"
-            </script>';
+            date_default_timezone_set('Etc/UTC');
+
+            require 'PHPMailerAutoload.php';
+            
+            $mail = new PHPMailer;
+            $mail->isSMTP();
+            $mail->SMTPDebug = 2;
+            $mail->Debugoutput = 'html';
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPSecure = 'tls';
+            $mail->SMTPAuth = true;
+            
+            $mail->Username = "IowaAirlinesFSD@gmail.com";
+            $mail->Password = "Password7";
+            $mail->setFrom('IowaAirlinesFSD@gmail.com', 'Iowa Airlines Team');
+            $mail->addAddress($email, $username);
+            
+            $mail->Subject = 'Email Verification';
+            $mail->Body = 'Thank you for registering with Iowa Airlines!
+
+            Please click the following link to verify your registration:
+            http://localhost:8000/index.html#create_successful
+
+            You will be redirected to a confirmation page.';
+            $mail->addEmbeddedImage('Images/banner.jpeg','banner',
+                'banner.jpeg');
+            
+            if (!$mail->send()) {
+                echo "Mailer Error: " . $mail->ErrorInfo;
+            } else {
+                echo "Message sent!";
+            }
         }
     }
     
