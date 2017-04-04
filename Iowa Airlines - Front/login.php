@@ -38,7 +38,6 @@
         }
         else {
             $loggedIn = true;
-            session_register($userName);
         }
     }
 
