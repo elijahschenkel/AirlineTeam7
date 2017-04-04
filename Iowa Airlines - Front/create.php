@@ -72,7 +72,9 @@
             if (!$mail->send()) {
                 echo "Mailer Error: " . $mail->ErrorInfo;
             } else {
-                echo "Message sent!";
+                echo '<script type="text/javascript">
+            window.location = "index.html#create_successful"
+        </script>';
             }
         }
     }
