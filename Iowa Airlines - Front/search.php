@@ -47,7 +47,7 @@
             echo "</div>";
         }
         else {
-            echo $r;
+            echo "yay";
         }       
 
     }
