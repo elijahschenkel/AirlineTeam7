@@ -35,27 +35,24 @@
 
     if ($from && $departdate)
     {
-        $query = "SELECT departure_loc FROM flights WHERE departure_loc = '$from' AND departure_date = '$departdate'";
+        $query = "SELECT departure_loc FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
         $result = mysqli_query( $con, $query);
         
-        $row = mysqli_fetch_array($result);
+        $r = mysqli_fetch_array($result);
 
-        if(!$row){
+        if(!$result){
             echo "<div>";
             echo "Sorry, no flights";
             echo "</div>";
         }
         else {
-            echo "<table>"; // start a table tag in the HTML
-
-            while($row = mysqli_fetch_array($result)) {   //Creates a loop to loop through results
-                echo "<tr><td>" . $row['flight_number'] . "</td><td>" . $row['departure_loc'] . "</td></tr>" . "<tr><td>" . $row['arrival_loc'] . "<tr><td>" . "<tr><td>" . $row['departure_time'] . "</td><td>" . "<tr><td>" . $row['arrival_time'] . "</td><td>"  . "<tr><td>" . $row['departure_date'] . "</td><td>" . "<tr><td>" . $row['arrival_date'] . "</td><td>" ;  //$row['index'] the index here is a field name
+            echo $r;
         }       
 
-       echo "</table>"; 
-        }
     }
 
-    echo "boo";
+    else {
+        echo "boo";
+    }
 ?>

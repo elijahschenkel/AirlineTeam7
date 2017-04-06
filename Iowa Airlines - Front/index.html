@@ -77,81 +77,87 @@
                                    <span class="image main"><img src="images/flightpath.jpg"/></span>
                                 
                                 <form method="post" action="search.php">
-                                    <div class="field half first">
-                                       <label for="travel">Ticket Type </label><select name="num_adults">
-                                            <option value="rt">Roundtrip</option>
-                                            <option value="ow">One-Way</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div class="field half">
-                                        <label for="travel">Flight Preference </label><select name="flight_pref">
-                                            <option value="ns">Nonstop</option>
-                                            <option value="sh">Shortest Flight</option>
-                                            <option value="no">No Preference</option>
-                                        </select>
-                                    </div>
-                                    
-									<div class="field half first">
-										<label for="from">From: </label><select name="from">
-                                            <option value="none"></option>
-                                            <option value="Cedar Rapids">Cedar Rapids</option>
-                                            <option value="Chicago">Chicago</option>
-                                            <option value="Dallas">Dallas</option>
-                                            <option value="Detroit">Detroit</option>
-                                            <option value="Kansas City">Kansas City</option>
-                                            <option value="Minneapolis">Minneapolis</option>
-                                        </select>
-									</div>
-									<div class="field half">
-										<label for="destination">From: </label><select name="dest">
-                                            <option value="none"></option>
-                                            <option value="Cedar Rapids">Cedar Rapids</option>
-                                            <option value="Chicago">Chicago</option>
-                                            <option value="Dallas">Dallas</option>
-                                            <option value="Detroit">Detroit</option>
-                                            <option value="Kansas City">Kansas City</option>
-                                            <option value="Minneapolis">Minneapolis</option>
-                                        </select>
-									</div>
-                                    <div class="field half first">
-										<label for="depart_date">Departure Date: </label>
-										<input type="date" name="dep_date" id="dep_date" />
-									</div>
-									<div class="field half">
-										<label for="return_date">Return Date: </label>
-										<input type="date" name="ret_date" id="ret_date" />
-									</div>
-                                    <div class="field half first">
-                                        <label for="number_adult">Number of Adults: </label><select name="num_adults">
-                                            <option value="none">0</option>
-                                            <option value="one">1</option>
-                                            <option value="two">2</option>
-                                            <option value="three">3</option>
-                                            <option value="four">4</option>
-                                            <option value="five">5</option>
-                                            <option value="six">6+</option>
-                                        </select>
-                                    </div>
-                                    <div class="field half">
-                                        <label for="number_children">Number of Children(0-17): </label><select name="num_childs">
-                                            <option value="none">0</option>
-                                            <option value="one">1</option>
-                                            <option value="two">2</option>
-                                            <option value="three">3</option>
-                                            <option value="four">4</option>
-                                            <option value="five">5</option>
-                                            <option value="six">6+</option>
-                                        </select>
-                                    </div>
-									<ul class="actions">
-										<li><input type="submit" value="Submit" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-                                    
-                                 
-							</article>
+                                <div class="field half first">
+                                   <label for="travel">Ticket Type </label><select name="ticket_type" id="tt">
+                                        <option value="rt" id="rt">Roundtrip</option>
+                                        <option value="ow" id="ow">One-Way</option>
+                                    </select>
+                                </div>
+
+                                <div class="field half">
+                                    <label for="travel">Flight Preference </label><select name="flight_pref" id="flightpref">
+                                        <option value="ns">Nonstop</option>
+                                        <option value="sh">Shortest Flight</option>
+                                        <option value="no">No Preference</option>
+                                    </select>
+                                </div>
+
+                                <div class="field half first">
+                                    <label for="from">From</label>
+								    <input type="text" name="from" id="from" />
+<!--
+                                    <select name="from" id="from">
+                                        <option value="none"></option>
+                                        <option value="Cedar Rapids">Cedar Rapids</option>
+                                        <option value="Chicago">Chicago</option>
+                                        <option value="Dallas">Dallas</option>
+                                        <option value="Detroit">Detroit</option>
+                                        <option value="Kansas City">Kansas City</option>
+                                        <option value="Minneapolis">Minneapolis</option>
+                                    </select>
+-->
+                                </div>
+                                <div class="field half">
+                                    <label for="to">To: </label>
+                                    <input type="text" name="to" id="to"/>
+<!--
+                                    <select name="to" id="to">
+                                        <option value="none"></option>
+                                        <option value="Cedar Rapids">Cedar Rapids</option>
+                                        <option value="Chicago">Chicago</option>
+                                        <option value="Dallas">Dallas</option>
+                                        <option value="Detroit">Detroit</option>
+                                        <option value="Kansas City">Kansas City</option>
+                                        <option value="Minneapolis">Minneapolis</option>
+                                    </select>
+-->
+                                </div>
+                                <div class="field half first">
+                                    <label for="depart_date">Departure Date: </label>
+                                    <input type="date" name="dep_date" id="dep_date" />
+                                </div>
+                                <div class="field half">
+                                    <label for="return_date">Return Date: </label>
+                                    <input type="date" name="ret_date" id="ret_date" />
+                                </div>
+                                <div class="field half first">
+                                    <label for="number_adult">Number of Adults: </label><select name="num_adults" id="num_adults">
+                                        <option value="none">0</option>
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6+</option>
+                                    </select>
+                                </div>
+                                <div class="field half">
+                                    <label for="number_children">Number of Children(0-17): </label><select name="num_childs" id="num_childs">
+                                        <option value="none">0</option>
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6+</option>
+                                    </select>
+                                </div>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Submit" class="special" /></li>
+                                    <li><input type="reset" value="Reset" /></li>
+                                </ul>
+                            </form>  
+				        </article>
 
 						<!-- Book Flight -->
 							<article id="book">
@@ -327,7 +333,7 @@
                                     </select>
                                 </div>
                                 <div class="field half">
-                                    <label for="to">From: </label><select name="to" id="to">
+                                    <label for="to">To: </label><select name="to" id="to">
                                         <option value="none"></option>
                                         <option value="Cedar Rapids">Cedar Rapids</option>
                                         <option value="Chicago">Chicago</option>
@@ -391,6 +397,7 @@
                                             <li><a href="#admin_create">Create Account</a></li>
                                             <li><a href="#admin_update">Update Flights</a></li>
                                             <li><a href="#admin_newflight">Create New Flight</a></li>
+                                            <li><a href="#admin_addaircraft">Add Aircraft</a></li>
                                             <li><a href="#admin_issue">Issue Tracker</a></li>
                                          </ul>
                                     </nav>
@@ -546,6 +553,10 @@
                         
                         <!-- Admin - Issue Tracker -->
                         <article id="admin_issue">
+                        </article>
+                        
+                        <!-- Admin - Add Aircraft -->
+                        <article id="admin_addaircraft">
                         </article>
                         
                         <!-- Manager Landing Page -->
