@@ -17,14 +17,42 @@
         echo "</div>";
     }
 
+    $tickettype = isset($_POST["tt"]) ? $_POST["tt"] : null;
 
-    $username = isset($_POST["user"]) ? $_POST["user"] : null;
+    $flightpref = isset($_POST["flightpref"]) ? $_POST["flightpref"] : null;
 
-    $password = isset($_POST["pass"]) ? $_POST["pass"] : null;
+    $from = isset($_POST["from"]) ? $_POST["from"] : null;
 
-    $firstname = isset($_POST["fn"]) ? $_POST["fn"] : null;
+    $to = isset($_POST["to"]) ? $_POST["to"] : null;
 
-    $lastname = isset($_POST["ln"]) ? $_POST["ln"] : null;
+    $departdate = isset($_POST["dep_date"]) ? $_POST["dep_date"] : null;
 
-    $email = isset($_POST["email"]) ? $_POST["email"] : null;
+    $returndate = isset($_POST["ret_date"]) ? $_POST["ret_date"] : null;
+
+    $num_adults = isset($_POST["num_adults"]) ? $_POST["num_adults"] : null;
+
+    $num_childs = isset($_POST["num_childs"]) ? $_POST["num_childs"] : null;
+
+    if ($from && $departdate)
+    {
+        $query = "SELECT departure_loc FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
+
+        $result = mysqli_query( $con, $query);
+        
+        $r = mysqli_fetch_array($result);
+
+        if(!$result){
+            echo "<div>";
+            echo "Sorry, no flights";
+            echo "</div>";
+        }
+        else {
+            echo $r;
+        }       
+
+    }
+
+    else {
+        echo "boo";
+    }
 ?>
