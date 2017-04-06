@@ -42,6 +42,46 @@
 
         // Enhancement: redirect to homepage with "Welcome, [user]" header
         else {
+            date_default_timezone_set('Etc/UTC');
+
+            require 'PHPMailerAutoload.php';
+            
+            $mail = new PHPMailer;
+            $mail->isSMTP();
+            $mail->SMTPDebug = 2;
+            $mail->Debugoutput = 'html';
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPSecure = 'tls';
+            $mail->SMTPAuth = true;
+            
+            $mail->Username = "IowaAirlinesFSD@gmail.com";
+            $mail->Password = "Password7";
+            $mail->setFrom('IowaAirlinesFSD@gmail.com', 'Iowa Airlines Team');
+            $mail->addAddress($email, $username);
+            
+            $mail->Subject = 'Manager Account Creation';
+            $mail->Body = 'Your manager account has now been created.
+            
+            Your password for you account is: IowaAirlineManger1
+            
+            
+            Please click the following link to loging to your account.
+            http://localhost:8000/index.html#login
+            
+            ';
+            $mail->addEmbeddedImage('Images/banner.jpeg','banner',
+                'banner.jpeg');
+            
+            if (!$mail->send()) {
+                echo "Mailer Error: " . $mail->ErrorInfo;
+            } else {
+                echo '<script type="text/javascript">
+            window.location = "index.html#create_successful"
+        </script>';
+            }
+            
+            
             echo '<script type="text/javascript">
             window.location = "index.html#admin_login"
             </script>';
