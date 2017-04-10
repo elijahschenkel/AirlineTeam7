@@ -63,11 +63,15 @@
             $mail->Subject = 'Manager Account Creation';
             $mail->Body = 'Your manager account has now been created.
             
-            Your password for you account is: IowaAirlineManger1
+            Your username is: Manager
             
+            Your password for you account is: IowaAirlineManger1
             
             Please click the following link to loging to your account.
             http://localhost:8000/index.html#login
+            
+            Thank you,
+            Iowa Airline Admin
             
             ';
             $mail->addEmbeddedImage('Images/banner.jpeg','banner',
@@ -75,16 +79,12 @@
             
             if (!$mail->send()) {
                 echo "Mailer Error: " . $mail->ErrorInfo;
+                
             } else {
                 echo '<script type="text/javascript">
-            window.location = "index.html#create_successful"
-        </script>';
-            }
-            
-            
-            echo '<script type="text/javascript">
             window.location = "index.html#admin_login"
             </script>';
+            }
         }
     }
     

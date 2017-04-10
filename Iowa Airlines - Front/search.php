@@ -35,22 +35,50 @@
 
     if ($from && $departdate)
     {
-        $query = "SELECT departure_loc FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
+        $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
-        $result = mysqli_query( $con, $query);
+//        $result = mysqli_query( $con, $query);
         
-        $r = mysqli_fetch_array($result);
+//        if (mysqli_num_rows($result) > 0) {
+//        // output data of each row
+//            while (mysqli_fetch_assoc($result)) {
+//                echo "Flight Number: ".$row["flight_number"] 
+//                    . " - Departure Location: ".$row["departure_loc"] 
+//                    . " - Departure Date: ".$row["departure_date"] 
+//                    . " - Departure Time: ".$row["departure_time"] 
+//                    . " - Arrival Location: ".$row["arrival_loc"] 
+//                    . " - Arrival Date: ". $row["arrival_date"] 
+//                    . " - Arrival Time: ". $row["arrival_time"] 
+//                    . "<br>";
+//            }
+//        } else {
+//            echo "0 results";
+//        }
+        
+        if($result = mysqli_query( $con, $query)) {
+            echo "<table border='1' cellpadding='10'>";
+            echo "<tr><th>Flight Number</th><th>Departure Location</th><th>Departure Date</th><th>Departure Date</th><th>Departure Time</th><th>Arrival Location</th><th>Arrival Date</th><th>Arrival Time</th></tr>";
 
-        if(!$result){
-            echo "<div>";
-            echo "Sorry, no flights";
-            echo "</div>";
+            while($row = mysqli_fetch_row($result)) {
+                  echo "<tr>";
+                  echo '<td>' . $row['flight_number'] . '</td>';
+                  echo '<td>' . $row['departure_loc'] . '</td>';
+                  echo "</tr>"; 
+            }
+            echo "</table>";
+        } else {
+            echo "no flights";
         }
-        else {
-            echo $r;
-        }       
-
     }
+
+//        if(!$result){
+//            echo "<div>";
+//            echo "Sorry, no flights";
+//            echo "</div>";
+//        }
+//        else {
+//            echo "yay";
+//        }       
 
     else {
         echo "boo";
