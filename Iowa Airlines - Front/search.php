@@ -33,8 +33,7 @@
 
     $num_childs = isset($_POST["num_childs"]) ? $_POST["num_childs"] : null;
 
-    if ($from && $departdate)
-    {
+    if ($from && $departdate) {
         $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
 //        $result = mysqli_query( $con, $query);

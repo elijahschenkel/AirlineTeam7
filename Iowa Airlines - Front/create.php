@@ -62,7 +62,7 @@
             $mail->Body = 'Thank you for registering with Iowa Airlines!
 
             Please click the following link to verify your registration:
-            http://127.0.0.1:8000/index.html#create_successful
+            http://127.0.0.1:8000/index.html#login
 
             You will be redirected to a confirmation page.';
             $mail->addEmbeddedImage('Images/banner.jpeg','banner',
