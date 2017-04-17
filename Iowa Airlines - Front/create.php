@@ -39,7 +39,6 @@
             echo "hmm";
         }
 
-        // Enhancement: redirect to user dashboard
         else {
             date_default_timezone_set('Etc/UTC');
 
@@ -47,8 +46,8 @@
             
             $mail = new PHPMailer;
             $mail->isSMTP();
-            $mail->SMTPDebug = 2;
-            $mail->Debugoutput = 'html';
+            //$mail->SMTPDebug = 2;
+            //$mail->Debugoutput = 'html';
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
             $mail->SMTPSecure = 'tls';
@@ -63,7 +62,7 @@
             $mail->Body = 'Thank you for registering with Iowa Airlines!
 
             Please click the following link to verify your registration:
-            http://localhost:8000/index.html#create_successful
+            http://127.0.0.1:8000/index.html#login
 
             You will be redirected to a confirmation page.';
             $mail->addEmbeddedImage('Images/banner.jpeg','banner',
@@ -73,8 +72,8 @@
                 echo "Mailer Error: " . $mail->ErrorInfo;
             } else {
                 echo '<script type="text/javascript">
-            window.location = "index.html#create_successful"
-        </script>';
+                        window.location = "index.html#create_successful"
+                     </script>';
             }
         }
     }

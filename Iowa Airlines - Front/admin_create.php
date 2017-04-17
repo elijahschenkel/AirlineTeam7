@@ -48,8 +48,8 @@
             
             $mail = new PHPMailer;
             $mail->isSMTP();
-            $mail->SMTPDebug = 2;
-            $mail->Debugoutput = 'html';
+            //$mail->SMTPDebug = 2;
+            //$mail->Debugoutput = 'html';
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
             $mail->SMTPSecure = 'tls';
@@ -68,7 +68,7 @@
             Your password for you account is: IowaAirlineManger1
             
             Please click the following link to loging to your account.
-            http://localhost:8000/index.html#login
+            http://127.0.0.1:8000/index.html#login
             
             Thank you,
             Iowa Airline Admin

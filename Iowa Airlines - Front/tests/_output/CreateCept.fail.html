@@ -363,8 +363,7 @@
                                     </select>
                                 </div>
                                 <div class="field half">
-                                    <label for="number_children">Number of Children(0-17): </label>
-				    <select name="num_childs" id="num_childs">
+                                    <label for="number_children">Number of Children(0-17): </label><select name="num_childs" id="num_childs">
                                         <option value="none">0</option>
                                         <option value="one">1</option>
                                         <option value="two">2</option>
@@ -550,49 +549,6 @@
                         
                         <!-- Admin - Create New Flights -->
                         <article id="admin_newflight">
-				<h2 class="major">Add New Flight</h2>
-					<form method="post" action="addFlight.php">
-						<div class="field half first">
-							<label for="PlaneID">Plane ID</label>
-							<input type="text" name="planeID" id="pid" />
-								
-							<label for="PlaneType">Plane Type</label>
-							<input type="text" name="planetype" id="ptype" />
-							
-							<label for="maxSeat">Seating Capacity</label>
-							<input type="text" name="maxseat" id="maxseat" />
-
-							<label for="maxCargo">Cargo Capacity (lbs)</label>
-							<input type="text" name="maxcargo" id="maxcargo" />
-
-						</div>
-						<div class="field half">
-							<label for="flightNumber">Flight Number</label>
-							<input type="text" name="flightnum" id="flightnum" />
-
-							<label for="departlocation">Departure Location</label>
-							<input type="text" name="admin_deploc" id="admin_deploc" />
-
-							<label for="departdate">Departure Date</label>
-							<input type="text" name="admin_depdate" id="admin_depdate" />
-						
-							<label for="departtime">Departure Time</label>
-							<input type="text" name="admin_deptime id="admin_deptime" />
-
-							<label for="arrivallocation">Arrival Location</label>
-							<input type="text" name="admin_arrloc" id="admin_arrloc" />
-
-							<label for="arrivaldate">Arrival Date</label>
-							<input type="text" name="admin_arrdate" id="admin_arrdate" />
-						
-							<label for="arrivaltime">Arrival Time</label>
-							<input type="text" name="admin_arrtime id="admin_arrtime" />
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Update" class="special" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
                         </article>
                         
                         <!-- Admin - Issue Tracker -->
@@ -640,7 +596,7 @@
                                 <h2 class="major">Create an Account</h2>
                                 <span class="image main"><img src="images/create_account.jpg">
                                 </span>
-                                <form method="post" action="create.php" id="create_form">
+                                <form method="post" action="create.php">
                                     <div class="field half first">
 										<label for="username">Username</label>
 										<input type="text" name="user" id="user" />
@@ -675,7 +631,7 @@
 								<h1>UH-OH!!</h1>
                                 <h3 class="major">All fields required!</h3>
                                 <span class="image main"><img src="images/invalid_login.jpg"/></span>
-								<form method="post" action="create.php" id="create_form">
+								<form method="post" action="create.php">
                                     <div class="field half first">
 										<label for="username">Username</label>
 										<input type="text" name="user" id="user" />
