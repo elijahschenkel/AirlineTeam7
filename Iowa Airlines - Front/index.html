@@ -661,6 +661,27 @@
                                 </form>
 							</article>	
                         
+                        <!-- Unsuccessful Create - User already exists -->
+                        <article id="create_alreadyexists">
+								<h1>User Already Exists</h1>
+                                <span class="image main"><img src="images/welcome_back.jpeg"/></span>
+								<form method="post" action="login.php">
+									<div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Login" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                        <li><a href="#forgot">Forgot Password</a></li>
+									</ul>
+								</form>
+							</article>	
+                        
                         
                         <!-- Successful Create -->
                         <article id="create_successful">
