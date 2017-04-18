@@ -549,14 +549,157 @@
                         
                         <!-- Admin - Create New Flights -->
                         <article id="admin_newflight">
+                        <h2 class="major">Add New Flight</h2>
+                            <form method="post" action="addFlight.php">
+                                <div class="field half first">
+                                    <label for="PlaneID">Plane ID</label>
+                                    <input type="text" name="planeID" id="planeID" />
+
+                                    <label for="PlaneType">Plane Type</label>
+                                    <input type="text" name="planetype" id="planetype" />
+
+                                    <label for="maxSeat">Seating Capacity</label>
+                                    <input type="text" name="maxseat" id="maxseat" />
+
+                                    <label for="maxCargo">Cargo Capacity (lbs)</label>
+                                    <input type="text" name="maxcargo" id="maxcargo" />
+
+                                </div>
+                                <div class="field half">
+                                    <label for="flightnumber">Flight Number</label>
+                                    <input type="text" name="flightnum" id="flightnum" />
+
+                                    <label for="departlocation">Departure Location</label>
+                                    <input type="text" name="admin_deploc" id="admin_deploc" />
+
+                                    <label for="departdate">Departure Date</label>
+                                    <input type="text" name="admin_depdate" id="admin_depdate" />
+
+                                    <label for="departtime">Departure Time</label>
+                                    <input type="text" name="admin_deptime" id="admin_deptime" />
+                                    
+                                    <label for="arrivallocation">Arrival Location</label>
+                                    <input type="text" name="admin_arrloc" id="admin_arrloc" />
+                                    
+                                    <label for="arrivaldate">Arrival Date</label>
+                                    <input type="text" name="admin_arrdate" id="admin_arrdate" />
+
+                                    <label for="arrivaltime">Arrival Time</label>
+                                    <input type="text" name="admin_arrtime" id="admin_arrtime" />
+                                </div>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Update" class="special" /></li>
+                                    <li><input type="reset" value="Reset" /></li>
+                                </ul>
+                            </form>
                         </article>
+
+                        <!-- Admin - Create New Flights 
+                        <article id="admin_newflight">
+                            <h2 class="major">Create New Flights</h2>
+                                <form method="post" action="addFlight.php">
+                                    <div class="field half first">
+										<label for="departure_loc">Departure City</label>
+										<input type="text" name="d_loc" id="d_loc" />
+									</div>
+									<div class="field half">
+										<label for="arrival_loc">Arrival City</label>
+										<input type="text" name="a_loc" id="a_loc" />
+									</div>
+                                    <div class="field half first">
+										<label for="departure_time">Departure Time</label>
+										<input type="text" name="d_time" id="d_time" />
+									</div>
+									<div class="field half">
+										<label for="arrival_time">Arrival Time</label>
+										<input type="text" name="a_time" id="a_time" />
+									</div>
+                                    <div class="field half first">
+										<label for="departure_date">Departure Date</label>
+										<input type="text" name="d_date" id="d_date" />
+                                    </div>
+                                    <div class="field half">
+										<label for="arrival_date">Arrival Date</label>
+										<input type="text" name="a_date" id="a_date" />
+									</div>
+                                    <div class="field half first">
+										<label for="delays">Delays</label>
+										<input type="text" name="delays" id="delays" />
+                                    </div>
+                                    <ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </form>
+                        </article>  -->
+                        
+                        <!-- Admin - Create New Flights Unsuccessful 
+                        <article id="admin_newflight_unsuccessful">
+                            <h2 class="major">Oops! Try Again</h2>
+                                <form method="post" action="addFlight.php">
+                                    <div class="field half first">
+										<label for="departure_loc">Departure City</label>
+										<input type="text" name="d_loc" id="d_loc" />
+									</div>
+									<div class="field half">
+										<label for="arrival_loc">Arrival City</label>
+										<input type="text" name="a_loc" id="a_loc" />
+									</div>
+                                    <div class="field half first">
+										<label for="departure_time">Departure Time</label>
+										<input type="text" name="d_time" id="d_time" />
+									</div>
+									<div class="field half">
+										<label for="arrival_time">Arrival Time</label>
+										<input type="text" name="a_time" id="a_time" />
+									</div>
+                                    <div class="field half first">
+										<label for="departure_date">Departure Date</label>
+										<input type="text" name="d_date" id="d_date" />
+                                    </div>
+                                    <div class="field half">
+										<label for="arrival_date">Arrival Date</label>
+										<input type="text" name="a_date" id="a_date" />
+									</div>
+                                    <div class="field half first">
+										<label for="delays">Delays</label>
+										<input type="text" name="delays" id="delays" />
+                                    </div>
+                                    <ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </form>
+                        </article>
+                        -->
+                        
                         
                         <!-- Admin - Issue Tracker -->
                         <article id="admin_issue">
+                            
                         </article>
                         
                         <!-- Admin - Add Aircraft -->
                         <article id="admin_addaircraft">
+                            <h2 class="major">Add A New Plane</h2>
+                                <form method="post" action="addPlane.php">
+                                    <div class="field half first">
+										<label for="company">Make of the Aircraft</label>
+										<input type="text" name="make" id="make" />
+									</div>
+									<div class="field half">
+										<label for="model">Model</label>
+										<input type="text" name="model" id="model" />
+									</div>
+                                    <div class="field half first">
+										<label for="capacity">Passenger Capacity</label>
+										<input type="text" name="max" id="max" />
+									</div>
+                                    <ul class="actions">
+										<li><input type="submit" value="Submit" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </form>
                         </article>
                         
                         <!-- Manager Landing Page -->

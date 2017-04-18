@@ -16,6 +16,11 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         echo "</div>";
     }
+//everything up from here
+
+
+
+
 
     $loggedIn = false;
 

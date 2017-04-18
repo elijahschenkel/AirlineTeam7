@@ -40,26 +40,11 @@
 
     if ($PlaneID && $PlaneType && $maxCargo && $maxSeat && $flightnumber && $departlocation){
 
-        $query = "INSERT INTO flights(flightnumber,departure_loc,arrival_loc,departure_time,arrival_time,departure_date,arrival_date) VALUE ('$flightnumber','$departlocation','$arrivallocation','$departtime','$arrivaltime','$departdate','$arrivaldate')";
+        //UPDATE `Airline_Users`.`flights` SET `departure_time`='800' WHERE `flightnumber`='917';
+        
+        $query = "UPDATE flights    SET('departure_loc'=$departlocation','arrival_loc'=$arrivallocation','departure_time'=$departtime','arrival_time'=$arrivaltime','departure_date'=$departdate','arrival_date'=$arrivaldate') WHERE 'flightnumber' = '$flightnumber'";
         
         $result = mysqli_query( $con, $query);
-        
-        // TODO: check if plane is in DB and add it if it is not
-        
-        $query = "SELECT planeID FROM planes WHERE planeID = '$PlaneID'";
-
-        $result = mysqli_query( $con, $query);
-
-        $row = mysqli_fetch_array($result);
-        
-        if(!$row){//plane doesn't exist yet, add plane
-            $query = "INSERT INTO planess(planeID,planetype,maxcargo,maxseat) VALUE ('$PlaneID','$PlaneType','$maxCargo','$maxSeat')";
-        }
-        else {//plane does exist
-            
-        }
-        
-        
 
         echo '<script type="text/javascript">
            window.location = "index.html#admin_login"
