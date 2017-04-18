@@ -18,11 +18,11 @@
     }
     $PlaneID = isset($_POST["planeID"]) ? $_POST["planeID"] : null;
 
-    $PlaneType = isset($_POST["planetype"]) ? $_POST["planetype"] : null;
+    $company = isset($_POST["make"]) ? $_POST["make"] : null;
 
-    $maxCargo = isset($_POST["maxcargo"]) ? $_POST["maxcargo"] : null;
+    $model = isset($_POST["model"]) ? $_POST["model"] : null;
 
-    $maxSeat = isset($_POST["maxseat"]) ? $_POST["maxseat"] : null;
+    $capacity = isset($_POST["max"]) ? $_POST["max"] : null;
 
     $flightnumber = isset($_POST["flightnum"]) ? $_POST["flightnum"] : null;
     
@@ -38,7 +38,7 @@
 
     $arrivaldate = isset($_POST["admin_arrdate"]) ? $_POST["admin_arrdate"] : null;
 
-    if ($PlaneID && $PlaneType && $maxCargo && $maxSeat && $flightnumber && $departlocation){
+    if ($PlaneID && $flightnumber && $departlocation){
 
         $query = "INSERT INTO flights(flightnumber,departure_loc,arrival_loc,departure_time,arrival_time,departure_date,arrival_date) VALUE ('$flightnumber','$departlocation','$arrivallocation','$departtime','$arrivaltime','$departdate','$arrivaldate')";
         
@@ -53,7 +53,7 @@
         $row = mysqli_fetch_array($result);
         
         if(!$row){//plane doesn't exist yet, add plane
-            $query = "INSERT INTO planess(planeID,planetype,maxcargo,maxseat) VALUE ('$PlaneID','$PlaneType','$maxCargo','$maxSeat')";
+            $query = "INSERT INTO planess(planeID,company,moded,capacity) VALUE ('$PlaneID','$make','$model','$max')";
         }
         else {//plane does exist
             
