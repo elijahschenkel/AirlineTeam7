@@ -1,12 +1,5 @@
 <!--
-	Inspiration from Dimension by HTML5 UP
-    https://html5up.net/dimension
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-    HTML/CSS/JS code written by Kristine Holland
-
-    Resources: 
+Resources for Dev: 
         https://www.w3schools.com/jquery/jquery_get_started.asp
         http://fontawesome.io/cheatsheet/
         http://callmenick.com/post/an-introduction-to-sass-scss
@@ -577,7 +570,7 @@
 							<input type="text" name="admin_depdate" id="admin_depdate" />
 						
 							<label for="departtime">Departure Time</label>
-							<input type="text" name="admin_deptime id="admin_deptime" />
+							<input type="text" name="admin_deptime" id="admin_deptime" />
 
 							<label for="arrivallocation">Arrival Location</label>
 							<input type="text" name="admin_arrloc" id="admin_arrloc" />
@@ -586,7 +579,7 @@
 							<input type="text" name="admin_arrdate" id="admin_arrdate" />
 						
 							<label for="arrivaltime">Arrival Time</label>
-							<input type="text" name="admin_arrtime id="admin_arrtime" />
+							<input type="text" name="admin_arrtime" id="admin_arrtime" />
 						</div>
 						<ul class="actions">
 							<li><input type="submit" value="Update" class="special" /></li>
@@ -703,6 +696,27 @@
 									</ul>
                                     </div>
                                 </form>
+							</article>	
+                        
+                        <!-- Unsuccessful Create - User already exists -->
+                        <article id="create_alreadyexists">
+								<h1>User Already Exists</h1>
+                                <span class="image main"><img src="images/welcome_back.jpeg"/></span>
+								<form method="post" action="login.php">
+									<div class="field half first">
+										<label for="username">Username</label>
+										<input type="text" name="user" id="user" />
+									</div>
+									<div class="field half">
+										<label for="password">Password</label>
+										<input type="password" name="pass" id="pass" />
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Login" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+                                        <li><a href="#forgot">Forgot Password</a></li>
+									</ul>
+								</form>
 							</article>	
                         
                         

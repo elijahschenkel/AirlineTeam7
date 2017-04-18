@@ -33,10 +33,10 @@
 
     $num_childs = isset($_POST["num_childs"]) ? $_POST["num_childs"] : null;
 
-    if ($from && $departdate) {
+    if ($from && $departdate && $num_adults) {
         $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
-//        $result = mysqli_query( $con, $query);
+       $result = mysqli_query( $con, $query);
         
 //        if (mysqli_num_rows($result) > 0) {
 //        // output data of each row
@@ -54,32 +54,32 @@
 //            echo "0 results";
 //        }
         
-        if($result = mysqli_query( $con, $query)) {
-            echo "<table border='1' cellpadding='10'>";
-            echo "<tr><th>Flight Number</th><th>Departure Location</th><th>Departure Date</th><th>Departure Date</th><th>Departure Time</th><th>Arrival Location</th><th>Arrival Date</th><th>Arrival Time</th></tr>";
-
-            while($row = mysqli_fetch_row($result)) {
-                  echo "<tr>";
-                  echo '<td>' . $row['flight_number'] . '</td>';
-                  echo '<td>' . $row['departure_loc'] . '</td>';
-                  echo "</tr>"; 
-            }
-            echo "</table>";
-        } else {
-            echo "no flights";
-        }
-    }
-
-//        if(!$result){
-//            echo "<div>";
-//            echo "Sorry, no flights";
-//            echo "</div>";
+//        if($result = mysqli_query( $con, $query)) {
+//            echo "<table border='1' cellpadding='10'>";
+//            echo "<tr><th>Flight Number</th><th>Departure Location</th><th>Departure Date</th><th>Departure Date</th><th>Departure Time</th><th>Arrival Location</th><th>Arrival Date</th><th>Arrival Time</th></tr>";
+//
+//            while($row = mysqli_fetch_row($result)) {
+//                  echo "<tr>";
+//                  echo '<td>' . $row['flight_number'] . '</td>';
+//                  echo '<td>' . $row['departure_loc'] . '</td>';
+//                  echo "</tr>"; 
+//            }
+//            echo "</table>";
+//        } else {
+//            echo "no flights";
 //        }
-//        else {
-//            echo "yay";
-//        }       
-
-    else {
-        echo "boo";
     }
+
+        if(!$result){
+            echo "<div>";
+            echo "Sorry, no flights";
+            echo "</div>";
+        }
+        else {
+            echo "yay";
+        }       
+
+//    else {
+//        echo "boo";
+//    }
 ?>

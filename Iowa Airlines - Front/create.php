@@ -36,7 +36,10 @@
         $result = mysqli_query( $con, $query);
 
         if(!$result) {
-            echo "hmm";
+            echo "user exists";
+            echo '<script type="text/javascript">
+                    window.location = "index.html#create_alreadyexists"
+                 </script>';   
         }
 
         else {

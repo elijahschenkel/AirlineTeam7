@@ -315,8 +315,6 @@
 	}
 
 		.select-wrapper:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
@@ -387,8 +385,6 @@
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
 				font-family: FontAwesome;
 				font-style: normal;
 				font-weight: normal;
@@ -492,8 +488,6 @@
 	}
 
 		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
@@ -756,7 +750,6 @@
 /* Table */
 
 	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
 	}
 
