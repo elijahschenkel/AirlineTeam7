@@ -48,9 +48,9 @@
            $res2 = mysqli_query( $con, $query2); //or die('cannot show columns from '.$table);
            
            if(mysqli_num_rows($res2)) {
-               echo '<table cellpadding="0" cellspacing="0">';
+               echo '<table cellpadding="4" cellspacing="4">';
                
-               echo '<tr><th>Flight Number</th><th>Departure Location</th><th>Departure Date</th><th>Departure Time</th><th>Arrival Location</th><th>Arrival Date</th><th>Arrival Time</th></tr>';
+               echo '<tr><th>Flight Number  |</th><th> Departure Location | </th><th> Departure Date | </th><th> Departure Time | </th><th> Arrival Location | </th><th> Arrival Date | </th><th>  Arrival Time | </th></tr>';
                
                while($row2=mysqli_fetch_row($res2)) {
                    echo '<tr>';
