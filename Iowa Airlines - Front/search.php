@@ -38,48 +38,42 @@
 
        $result = mysqli_query( $con, $query);
         
-//        if (mysqli_num_rows($result) > 0) {
-//        // output data of each row
-//            while (mysqli_fetch_assoc($result)) {
-//                echo "Flight Number: ".$row["flight_number"] 
-//                    . " - Departure Location: ".$row["departure_loc"] 
-//                    . " - Departure Date: ".$row["departure_date"] 
-//                    . " - Departure Time: ".$row["departure_time"] 
-//                    . " - Arrival Location: ".$row["arrival_loc"] 
-//                    . " - Arrival Date: ". $row["arrival_date"] 
-//                    . " - Arrival Time: ". $row["arrival_time"] 
-//                    . "<br>";
-//            }
-//        } else {
-//            echo "0 results";
-//        }
-        
-//        if($result = mysqli_query( $con, $query)) {
-//            echo "<table border='1' cellpadding='10'>";
-//            echo "<tr><th>Flight Number</th><th>Departure Location</th><th>Departure Date</th><th>Departure Date</th><th>Departure Time</th><th>Arrival Location</th><th>Arrival Date</th><th>Arrival Time</th></tr>";
-//
-//            while($row = mysqli_fetch_row($result)) {
-//                  echo "<tr>";
-//                  echo '<td>' . $row['flight_number'] . '</td>';
-//                  echo '<td>' . $row['departure_loc'] . '</td>';
-//                  echo "</tr>"; 
-//            }
-//            echo "</table>";
-//        } else {
-//            echo "no flights";
-//        }
+       while($tableName = mysqli_fetch_row($result)) {
+           $table = $tableName[0];
+           
+           echo '<h3>',$table,'</h3>';
+           
+           $query2 = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights";
+           
+           $res2 = mysqli_query( $con, $query2); //or die('cannot show columns from '.$table);
+           
+           if(mysqli_num_rows($res2)) {
+               echo '<table cellpadding="0" cellspacing="0">';
+               
+               echo '<tr><th>Flight Number</th><th>Departure Location</th><th>Departure Date</th><th>Departure Time</th><th>Arrival Location</th><th>Arrival Date</th><th>Arrival Time</th></tr>';
+               
+               while($row2=mysqli_fetch_row($res2)) {
+                   echo '<tr>';
+                   foreach($row2 as $key=>$value){
+                       echo '<td>',$value,'</td>';
+                   }
+                   echo '</tr>';
+               }
+               echo '</table><br />';
+           }
+       }
     }
 
-        if(!$result){
-            echo "<div>";
-            echo "Sorry, no flights";
-            echo "</div>";
-        }
-        else {
-            echo "yay";
-        }       
+//        if(!$result){
+//            echo "<div>";
+//            echo "Sorry, no flights";
+//            echo "</div>";
+//        }
+//        else {
+//            echo "yay";
+//        }       
 
-//    else {
-//        echo "boo";
-//    }
+    else {
+        echo "boo";
+    }
 ?>
