@@ -34,34 +34,45 @@
     $num_childs = isset($_POST["num_childs"]) ? $_POST["num_childs"] : null;
 
     if ($from && $departdate && $num_adults) {
-        $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
+       // $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
-       $result = mysqli_query( $con, $query);
+        $query = "SELECT * from flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
+
+        $result = mysqli_query( $con, $query);
+
+        $arr = array();
+        if($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            $arr[] = $row;
+          }
+        }
+
+        echo $json_response = json_encode($arr);
         
-       while($tableName = mysqli_fetch_row($result)) {
-           $table = $tableName[0];
+       // while($tableName = mysqli_fetch_row($result)) {
+       //     $table = $tableName[0];
            
-           echo '<h3>',$table,'</h3>';
+       //     echo '<h3>',$table,'</h3>';
            
-           $query2 = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights";
+       //     $query2 = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights";
            
-           $res2 = mysqli_query( $con, $query2); //or die('cannot show columns from '.$table);
+       //     $res2 = mysqli_query( $con, $query2); //or die('cannot show columns from '.$table);
            
-           if(mysqli_num_rows($res2)) {
-               echo '<table cellpadding="4" cellspacing="4">';
+       //     if(mysqli_num_rows($res2)) {
+       //         echo '<table cellpadding="4" cellspacing="4">';
                
-               echo '<tr><th>Flight Number  |</th><th> Departure Location | </th><th> Departure Date | </th><th> Departure Time | </th><th> Arrival Location | </th><th> Arrival Date | </th><th>  Arrival Time | </th></tr>';
+       //         echo '<tr><th>Flight Number  |</th><th> Departure Location | </th><th> Departure Date | </th><th> Departure Time | </th><th> Arrival Location | </th><th> Arrival Date | </th><th>  Arrival Time | </th></tr>';
                
-               while($row2=mysqli_fetch_row($res2)) {
-                   echo '<tr>';
-                   foreach($row2 as $key=>$value){
-                       echo '<td>',$value,'</td>';
-                   }
-                   echo '</tr>';
-               }
-               echo '</table><br />';
-           }
-       }
+       //         while($row2=mysqli_fetch_row($res2)) {
+       //             echo '<tr>';
+       //             foreach($row2 as $key=>$value){
+       //                 echo '<td>',$value,'</td>';
+       //             }
+       //             echo '</tr>';
+       //         }
+       //         echo '</table><br />';
+       //     }
+       // }
     }
 
 //        if(!$result){
