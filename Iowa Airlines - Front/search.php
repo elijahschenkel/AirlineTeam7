@@ -43,9 +43,11 @@
            
            echo '<h3>',$table,'</h3>';
            
-           $query2 = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights";
+           //$query2 = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights";
            
-           $res2 = mysqli_query( $con, $query2); //or die('cannot show columns from '.$table);
+           $sql="SELECT  * FROM flights WHERE flight_number=911"; 
+           
+           $res2 = mysqli_query( $con, $sql); //or die('cannot show columns from '.$table);
            
            if(mysqli_num_rows($res2)) {
                echo '<table cellpadding="4" cellspacing="4">';
@@ -54,6 +56,19 @@
                
                while($row2=mysqli_fetch_row($res2)) {
                    echo '<tr>';
+                   
+                   $departLocation = $row['departure_loc'];
+                   $departDate = $row['departure_date'];
+                   $departTime = $row['departure_time'];
+                   $arrivalLocation = $row['arrival_loc'];
+                   $arrivalDate = $row['arrival_date'];
+                   $arrivalTime = $row['arrival_time'];
+                   
+                   echo  "<ul>\n"; 
+                   echo  "<li>" . $departLocation . " " . $departDate .  " " . $departTime . "</li>\n"; 
+                   echo  "<li>" . $arrivalLocation . " " . $arrivalDate .  " " . $arrivalTime . "</li>\n"; 
+                   echo  "</ul>";
+                   
                    foreach($row2 as $key=>$value){
                        echo '<td>',$value,'</td>';
                    }
@@ -62,8 +77,22 @@
                echo '</table><br />';
            }
        }
-    }
-
+    }/*
+    	$sql="SELECT  * FROM Contacts WHERE ID=" . $contactid; 
+    	//-run  the query against the mysql query function 
+    	$result=mysql_query($sql); 
+    	//-create  while loop and loop through result set 
+    	while($row=mysql_fetch_array($result)){ 
+    	  $FirstName =$row['FirstName']; 
+    	            $LastName=$row['LastName']; 
+    	            $PhoneNumber=$row['PhoneNumber']; 
+    	            $Email=$row['Email']; 
+    	//-display  the result of the array 
+    	echo  "<ul>\n"; 
+    	echo  "<li>" . $FirstName . " " . $LastName .  "</li>\n"; 
+    	echo  "<li>" . $PhoneNumber . "</li>\n"; 
+    	echo  "<li>" . "<a href=mailto:" . $Email .  ">" . $Email . "</a></li>\n"; 
+    	echo  "</ul>"; */
 //        if(!$result){
 //            echo "<div>";
 //            echo "Sorry, no flights";
