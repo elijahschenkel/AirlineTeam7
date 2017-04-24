@@ -34,7 +34,6 @@
     $num_childs = isset($_POST["num_childs"]) ? $_POST["num_childs"] : null;
 
     if ($from && $departdate && $num_adults) {
-       // $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
         $query = "SELECT * from flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
@@ -47,42 +46,28 @@
           }
         }
 
-        echo $json_response = json_encode($arr);
-        
-       // while($tableName = mysqli_fetch_row($result)) {
-       //     $table = $tableName[0];
-           
-       //     echo '<h3>',$table,'</h3>';
-           
-       //     $query2 = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights";
-           
-       //     $res2 = mysqli_query( $con, $query2); //or die('cannot show columns from '.$table);
-           
-       //     if(mysqli_num_rows($res2)) {
-       //         echo '<table cellpadding="4" cellspacing="4">';
-               
-       //         echo '<tr><th>Flight Number  |</th><th> Departure Location | </th><th> Departure Date | </th><th> Departure Time | </th><th> Arrival Location | </th><th> Arrival Date | </th><th>  Arrival Time | </th></tr>';
-               
-       //         while($row2=mysqli_fetch_row($res2)) {
-       //             echo '<tr>';
-       //             foreach($row2 as $key=>$value){
-       //                 echo '<td>',$value,'</td>';
-       //             }
-       //             echo '</tr>';
-       //         }
-       //         echo '</table><br />';
-       //     }
-       // }
-    }
+        echo "<table border='1' style='border-collapse: collapse;border-color: silver;'>";  
+        echo "<tr style='font-weight: bold;'>";  
+        echo "<td width='150' align='center'>Flight Number</td>";  
+        echo "<td width='150' align='center'>Departure Location</td>"; 
+        echo "<td width='150' align='center'>Departure Date</td>"; 
+        echo "<td width='150' align='center'>Departure Time</td>"; 
+        echo "<td width='150' align='center'>Arrival Location</td>"; 
+        echo "<td width='150' align='center'>Arrival Date</td>"; 
+        echo "<td width='150' align='center'>Arrival Time</td>"; 
+        echo "</tr>";
 
-//        if(!$result){
-//            echo "<div>";
-//            echo "Sorry, no flights";
-//            echo "</div>";
-//        }
-//        else {
-//            echo "yay";
-//        }       
+        foreach ($arr as $row) { 
+          echo '<td width="150" align=center>' . $row['flight_number'] . '</td>'.
+               '<td width="150" align=center>' . $row['departure_loc'] . '</td>'.
+               '<td width="150" align=center>' . $row['departure_date'] . '</td>'.
+               '<td width="150" align=center>' . $row['departure_time'] . '</td>'.
+               '<td width="150" align=center>' . $row['arrival_loc'] . '</td>'.
+               '<td width="150" align=center>' . $row['arrival_date'] . '</td>'.
+               '<td width="150" align=center>' . $row['arrival_time'] . '</td>';
+          echo '</tr>';
+        }
+    }
 
     else {
         echo "boo";
