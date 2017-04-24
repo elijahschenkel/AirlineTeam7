@@ -24,7 +24,7 @@
 
     $capacity = isset($_POST["max"]) ? $_POST["max"] : null;
 
-    $flightnumber = isset($_POST["flightnum"]) ? $_POST["flightnum"] : null;
+    $flight_number = isset($_POST["flightnum"]) ? $_POST["flightnum"] : null;
     
     $departlocation = isset($_POST["admin_deploc"]) ? $_POST["admin_deploc"] : null;
 
@@ -39,11 +39,12 @@
     $arrivaldate = isset($_POST["admin_arrdate"]) ? $_POST["admin_arrdate"] : null;
 
 
-    if ($PlaneID && $flightnumber && $departlocation){
+
+    if ($PlaneID && $flight_number && $departlocation){
 
         //UPDATE `Airline_Users`.`flights` SET `departure_time`='800' WHERE `flightnumber`='917';
         
-        $sql = "UPDATE flights SET'departure_loc'='$departlocation','arrival_loc'='$arrivallocation','departure_time'='$departtime','arrival_time'='$arrivaltime','departure_date'='$departdate','arrival_date'='$arrivaldate' WHERE 'flightnumber' = '$flightnumber'";
+        $sql = "UPDATE flights SET'departure_loc'='$departlocation','arrival_loc'='$arrivallocation','departure_time'='$departtime','arrival_time'='$arrivaltime','departure_date'='$departdate','arrival_date'='$arrivaldate' WHERE 'flight_number' = '$flight_number'";
         
         $con->query($sql);
         // Prepare statement

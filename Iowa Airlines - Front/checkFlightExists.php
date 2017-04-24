@@ -17,13 +17,13 @@
         echo "</div>";
     }
 
-    $flightnumber = isset($_POST["fn"]) ? $_POST["fn"] : null;
+    $flight_number = isset($_POST["fn"]) ? $_POST["fn"] : null;
 
-    if ($flightnumber){
+    if ($flight_number){
         
         // check if flight is in DB and add it if it is not
         
-        $query = "SELECT flightnumber FROM flights WHERE flightnumber = '$flightnumber'";
+        $query = "SELECT flight_number FROM flights WHERE flight_number = '$flight_number'";
 
         $result = mysqli_query( $con, $query);
 
