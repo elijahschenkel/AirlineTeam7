@@ -67,7 +67,42 @@ Resources for Dev:
 						<!-- Search for Flight -->
 							<article id="search">
 				                <h2 class="major">Search for Flight</h2>
-                                   <span class="image main"><img src="images/flightpath.jpg"/></span>
+                                <!-- <span class="image main"><img src="images/flightpath.jpg"/></span> -->
+                                <div id="map">
+                                    <script>
+                                        function initMap() {
+                                                var map = new google.maps.Map(document.getElementById('map'), {
+                                                  zoom: 5,
+                                                  center: {lat: 41.977879, lng: -91.665627},
+                                                  mapTypeId: 'terrain'
+                                                });
+
+                                                var flightPlanCoordinates = [
+                                                  {lat: 41.977879, lng: -91.665627}, //Cedar Rapids  
+                                                  {lat: 41.881832, lng: -87.623177}, //Chicago
+                                                  {lat: 41.977879, lng: -91.665627}, //Cedar Rapids
+                                                  {lat: 44.986656, lng: -93.258133}, //Minneapolis 
+                                                  {lat: 41.977879, lng: -91.665627}, //Cedar Rapids
+                                                  {lat: 42.331429, lng: -83.045753}, //Detroit
+                                                  {lat: 41.977879, lng: -91.665627}, //Cedar Rapids
+                                                  {lat: 39.125212, lng: -94.551136}, //Kansas City
+                                                  {lat: 41.977879, lng: -91.665627}, //Cedar Rapids
+                                                  {lat: 32.7767, lng: -96.7970} //Dallas
+                                                ];
+                                                  
+                                                var flightPath = new google.maps.Polyline({
+                                                  path: flightPlanCoordinates,
+                                                  geodesic: true,
+                                                  strokeColor: '#FF0000',
+                                                  strokeOpacity: 1.0,
+                                                  strokeWeight: 2
+                                                });
+
+                                                flightPath.setMap(map);
+                                        } 
+                                    </script>
+                                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwBL6Y1AGo7QCc-c0Ls9S2MWDR9KkFQlY&callback=initMap"></script>
+                                </div>
                                 
                                 <form method="post" action="search.php">
                                 <div class="field half first">
@@ -88,32 +123,10 @@ Resources for Dev:
                                 <div class="field half first">
                                     <label for="from">From</label>
 								    <input type="text" name="from" id="from" />
-<!--
-                                    <select name="from" id="from">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half">
                                     <label for="to">To: </label>
                                     <input type="text" name="to" id="to"/>
-<!--
-                                    <select name="to" id="to">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half first">
                                     <label for="depart_date">Departure Date: </label>
@@ -318,32 +331,10 @@ Resources for Dev:
                                 <div class="field half first">
                                     <label for="from">From</label>
 								    <input type="text" name="from" id="from" />
-<!--
-                                    <select name="from" id="from">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half">
                                     <label for="to">To: </label>
                                     <input type="text" name="to" id="to"/>
-<!--
-                                    <select name="to" id="to">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half first">
                                     <label for="depart_date">Departure Date: </label>
