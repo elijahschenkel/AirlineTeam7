@@ -43,9 +43,11 @@
 
         //UPDATE `Airline_Users`.`flights` SET `departure_time`='800' WHERE `flightnumber`='917';
         
-        $sql = "UPDATE flights SET'departure_loc'='$departlocation','arrival_loc'='$arrivallocation','departure_time'='$departtime','arrival_time'='$arrivaltime','departure_date'='$departdate','arrival_date'='$arrivaldate' WHERE 'flightnumber' = '$flightnumber'";
+        $sql = "UPDATE `Airline_Users`.`flights` SET`departure_loc`='$departlocation',`arrival_loc`='$arrivallocation',`departure_time`='$departtime',`arrival_time`='$arrivaltime',`departure_date`='$departdate',`arrival_date`='$arrivaldate' WHERE `flightnumber` = '$flightnumber'";
         
-        $con->query($sql);
+        //$sql = "UPDATE `Airline_Users`.`flights` SET `departure_time`='$departtime',`arrival_time`='$arrivaltime' WHERE `flightnumber`='432'";
+        
+        //$con->query($sql);
         // Prepare statement
         //$stmt = $con->prepare($sql);
 
@@ -53,6 +55,12 @@
         //$stmt->execute();
         
         //$result = mysqli_query( $con, $sql);
+        
+        if (mysqli_query($con, $sql)) {
+            //echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . mysqli_error($conn);
+        }
 
         echo '<script type="text/javascript">
            window.location = "index.html#admin_login"
