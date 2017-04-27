@@ -1533,3 +1533,12 @@
 				#main nav.use-middle:after {
 					display: none;
 				}
+#map {
+	width: 100%;
+	height: 400px;
+	background-color: grey;
+}
+
+#info {
+	color: #000000;
+}

@@ -34,6 +34,7 @@
     $num_childs = isset($_POST["num_childs"]) ? $_POST["num_childs"] : null;
 
     if ($from && $departdate && $num_adults) {
+<<<<<<< HEAD
         $query = "SELECT flight_number AND departure_loc AND departure_date AND departure_time AND arrival_loc AND arrival_date AND arrival_time FROM flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
 
        $result = mysqli_query( $con, $query);
@@ -101,6 +102,42 @@
 //        else {
 //            echo "yay";
 //        }       
+=======
+
+        $query = "SELECT * from flights WHERE departure_loc = '$from' AND arrival_loc = '$to' AND departure_date = '$departdate'";
+
+        $result = mysqli_query( $con, $query);
+
+        $arr = array();
+        if($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            $arr[] = $row;
+          }
+        }
+
+        echo "<table border='1' style='border-collapse: collapse;border-color: silver;'>";  
+        echo "<tr style='font-weight: bold;'>";  
+        echo "<td width='150' align='center'>Flight Number</td>";  
+        echo "<td width='150' align='center'>Departure Location</td>"; 
+        echo "<td width='150' align='center'>Departure Date</td>"; 
+        echo "<td width='150' align='center'>Departure Time</td>"; 
+        echo "<td width='150' align='center'>Arrival Location</td>"; 
+        echo "<td width='150' align='center'>Arrival Date</td>"; 
+        echo "<td width='150' align='center'>Arrival Time</td>"; 
+        echo "</tr>";
+
+        foreach ($arr as $row) { 
+          echo '<td width="150" align=center>' . $row['flight_number'] . '</td>'.
+               '<td width="150" align=center>' . $row['departure_loc'] . '</td>'.
+               '<td width="150" align=center>' . $row['departure_date'] . '</td>'.
+               '<td width="150" align=center>' . $row['departure_time'] . '</td>'.
+               '<td width="150" align=center>' . $row['arrival_loc'] . '</td>'.
+               '<td width="150" align=center>' . $row['arrival_date'] . '</td>'.
+               '<td width="150" align=center>' . $row['arrival_time'] . '</td>';
+          echo '</tr>';
+        }
+    }
+>>>>>>> master
 
     else {
         echo "boo";

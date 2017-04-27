@@ -67,7 +67,185 @@ Resources for Dev:
 						<!-- Search for Flight -->
 							<article id="search">
 				                <h2 class="major">Search for Flight</h2>
-                                   <span class="image main"><img src="images/flightpath.jpg"/></span>
+                                <!-- <span class="image main"><img src="images/flightpath.jpg"/></span> -->
+                                <div id="map">
+                                    <script>
+                                        function initMap() {
+                                                var map = new google.maps.Map(document.getElementById('map'), {
+                                                  zoom: 5,
+                                                  center: {lat: 41.8864, lng: -91.7070},
+                                                  mapTypeId: 'terrain'
+                                                });
+
+                                                var flightPlanCoordinates = [
+                                                  {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 0
+                                                  {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                  {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 2
+                                                  {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                  {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 4
+                                                  {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                  {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 6
+                                                  {lat: 39.3006, lng: -94.7126}, //Kansas City - MCI - 7
+                                                  {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 8
+                                                  {lat: 32.8998, lng: -97.0403} //Dallas - DFW - 9
+                                                ];
+
+                                                // var flightPlanCoordinates1 = [
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 0
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 39.3006, lng: -94.7126}, //Kansas City - MCI - 7
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 32.8998, lng: -97.0403} //Dallas - DFW - 9
+                                                // ];
+
+                                                // var flightPlanCoordinates2 = [
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 0
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 39.3006, lng: -94.7126}, //Kansas City - MCI - 7
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 32.8998, lng: -97.0403} //Dallas - DFW - 9
+                                                // ];
+
+                                                // var flightPlanCoordinates2 = [
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 41.8864, lng: -91.7070}, //Cedar Rapids - CID - 0
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 41.9742, lng: -87.9073}, //Chicago - ORD - 1
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 44.8848, lng: -93.2223}, //Minneapolis - MSP - 3
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 39.3006, lng: -94.7126}, //Kansas City - MCI - 7
+                                                //   {lat: 42.2162, lng: -83.3554}, //Detroit - DTW - 5
+                                                //   {lat: 32.8998, lng: -97.0403} //Dallas - DFW - 9
+                                                // ];
+                                                  
+                                                // var flightPath0 = new google.maps.Polyline({
+                                                //   path: flightPlanCoordinates,
+                                                //   geodesic: true,
+                                                //   strokeColor: '#FF0000',
+                                                //   strokeOpacity: 1.0,
+                                                //   strokeWeight: 2
+                                                // });
+                                                // var flightPath1 = new google.maps.Polyline({
+                                                //   path: flightPlanCoordinates1,
+                                                //   geodesic: true,
+                                                //   strokeColor: '#FF0001',
+                                                //   strokeOpacity: 1.0,
+                                                //   strokeWeight: 2
+                                                // });
+
+                                                var marker0 = new google.maps.Marker({
+                                                  position: flightPlanCoordinates[0],
+                                                  map: map,
+                                                  title: 'Eastern Iowa Airport (CID)'
+                                                });
+
+                                                var contentString0 = "<table id='info' border='1' style='border-collapse: collapse;border-color: silver;'>" + "<tr style='font-weight: bold;'>" + "<td>Departure Location</td>" + "<td>Layover</td>" + "<td>Arrival Location</td>" + "</tr>" + "<tr>" + "<td>Cedar Rapids</td>" + "<td></td>" + "<td>Chicago</td>" + "</tr>" + "<tr>" + "<td>Cedar Rapids</td>" + "<td></td>" + "<td>Minneapolis</td>" + "</tr>" + "<tr>" + "<td>Cedar Rapids</td>" + "<td></td>" + "<td>Detroit</td>" + "</tr>" + "<tr>" + "<td>Cedar Rapids</td>" + "<td></td>" + "<td>Kansas City</td>" + "</tr>" + "<tr>" + "<td>Cedar Rapids</td>" + "<td></td>" + "<td>Dallas</td>" + "</tr>";
+
+                                                var infowindow0 = new google.maps.InfoWindow({
+                                                  content: contentString0
+                                                });
+
+                                                marker0.addListener('click', function() {
+                                                  infowindow0.open(map, marker0);
+                                                });
+
+                                                var marker1 = new google.maps.Marker({
+                                                  position: flightPlanCoordinates[1],
+                                                  map: map,
+                                                  title: 'OHare Airport (ORD)'
+                                                });
+
+                                                var contentString1 = "<table id='info' border='1' style='border-collapse: collapse;border-color: silver;'>" + "<tr style='font-weight: bold;'>" + "<td>Departure Location</td>" + "<td>Layover</td>" + "<td>Arrival Location</td>" + "</tr>" + "<tr>" + "<td>Chicago</td>" + "<td></td>" + "<td>Cedar Rapids</td>" + "</tr>" + "<tr>" + "<td>Chicago</td>" + "<td></td>" + "<td>Minneapolis</td>" + "</tr>" + "<tr>" + "<td>Chicago</td>" + "<td></td>" + "<td>Detroit</td>" + "</tr>" + "<tr>" + "<td>Chicago</td>" + "<td></td>" + "<td>Kansas City</td>" + "</tr>" + "<tr>" + "<td>Chicago</td>" + "<td></td>" + "<td>Dallas</td>" + "</tr>";
+
+                                                var infowindow1 = new google.maps.InfoWindow({
+                                                  content: contentString1
+                                                });
+
+                                                marker1.addListener('click', function() {
+                                                  infowindow1.open(map, marker1);
+                                                });
+
+                                                var marker2 = new google.maps.Marker({
+                                                  position: flightPlanCoordinates[3],
+                                                  map: map,
+                                                  title: 'Minneapolis-St.Paul Airport (MSP)'
+                                                });
+
+                                                var contentString2 = "<table id='info' border='1' style='border-collapse: collapse;border-color: silver;'>" + "<tr style='font-weight: bold;'>" + "<td>Departure Location</td>" + "<td>Layover</td>" + "<td>Arrival Location</td>" + "</tr>" + "<tr>" + "<td>Minneapolis</td>" + "<td></td>" + "<td>Cedar Rapids</td>" + "</tr>" + "<tr>" + "<td>Minneapolis</td>" + "<td></td>" + "<td>Chicago</td>" + "</tr>" + "<tr>" + "<td>Minneapolis</td>" + "<td></td>" + "<td>Detroit</td>" + "</tr>" + "<tr>" + "<td>Minneapolis</td>" + "<td></td>" + "<td>Kansas City</td>" + "</tr>" + "<tr>" + "<td>Minneapolis</td>" + "<td></td>" + "<td>Dallas</td>" + "</tr>";
+
+                                                var infowindow2 = new google.maps.InfoWindow({
+                                                  content: contentString2
+                                                });
+
+                                                marker2.addListener('click', function() {
+                                                  infowindow2.open(map, marker2);
+                                                });
+
+                                                var marker3 = new google.maps.Marker({
+                                                  position: flightPlanCoordinates[5],
+                                                  map: map,
+                                                  title: 'Detroit Airport (DTW)'
+                                                });
+
+                                                var contentString3 = "<table id='info' border='1' style='border-collapse: collapse;border-color: silver;'>" + "<tr style='font-weight: bold;'>" + "<td>Departure Location</td>" + "<td>Layover</td>" + "<td>Arrival Location</td>" + "</tr>" + "<tr>" + "<td>Detroit</td>" + "<td></td>" + "<td>Cedar Rapids</td>" + "</tr>" + "<tr>" + "<td>Detroit</td>" + "<td></td>" + "<td>Chicago</td>" + "</tr>" + "<tr>" + "<td>Detroit</td>" + "<td>Chicago</td>" + "<td>Minneapolis</td>" + "</tr>" + "<tr>" + "<td>Detroit</td>" + "<td>Cedar Rapids</td>" + "<td>Kansas City</td>" + "</tr>" + "<tr>" + "<td>Detroit</td>" + "<td>Cedar Rapids</td>" + "<td>Dallas</td>" + "</tr>";
+
+                                                var infowindow3 = new google.maps.InfoWindow({
+                                                  content: contentString3
+                                                });
+
+                                                marker3.addListener('click', function() {
+                                                  infowindow3.open(map, marker3);
+                                                });
+
+                                                var marker4 = new google.maps.Marker({
+                                                  position: flightPlanCoordinates[7],
+                                                  map: map,
+                                                  title: 'Kansas City Airport (MCI)'
+                                                });
+
+                                                var contentString4 = "<table id='info' border='1' style='border-collapse: collapse;border-color: silver;'>" + "<tr style='font-weight: bold;'>" + "<td>Departure Location</td>" + "<td>Layover</td>" + "<td>Arrival Location</td>" + "</tr>" + "<tr>" + "<td>Kansas City</td>" + "<td></td>" + "<td>Cedar Rapids</td>" + "</tr>" + "<tr>" + "<td>Kansas City</td>" + "<td>Cedar Rapids</td>" + "<td>Chicago</td>" + "</tr>" + "<tr>" + "<td>Kansas City</td>" + "<td>Cedar Rapids</td>" + "<td>Minneapolis</td>" + "</tr>" + "<tr>" + "<td>Kansas City</td>" + "<td>Cedar Rapids</td>" + "<td>Detroit</td>" + "</tr>" + "<tr>" + "<td>Kansas City</td>" + "<td></td>" + "<td>Dallas</td>" + "</tr>";
+
+                                                var infowindow4 = new google.maps.InfoWindow({
+                                                  content: contentString4
+                                                });
+
+                                                marker4.addListener('click', function() {
+                                                  infowindow4.open(map, marker4);
+                                                });
+
+                                                var marker5 = new google.maps.Marker({
+                                                  position: flightPlanCoordinates[9],
+                                                  map: map,
+                                                  title: 'Dallas Airport (DFW)'
+                                                });
+
+                                                var contentString5 = "<table id='info' border='1' style='border-collapse: collapse;border-color: silver;'>" + "<tr style='font-weight: bold;'>" + "<td>Departure Location</td>" + "<td>Layover</td>" + "<td>Arrival Location</td>" + "</tr>" + "<tr>" + "<td>Dallas</td>" + "<td></td>" + "<td>Cedar Rapids</td>" + "</tr>" + "<tr>" + "<td>Dallas</td>" + "<td></td>" + "<td>Chicago</td>" + "</tr>" + "<tr>" + "<td>Dallas</td>" + "<td></td>" + "<td>Minneapolis</td>" + "</tr>" + "<tr>" + "<td>Dallas</td>" + "<td></td>" + "<td>Detroit</td>" + "</tr>" + "<tr>" + "<td>Dallas</td>" + "<td></td>" + "<td>Kansas City</td>" + "</tr>";
+
+                                                var infowindow5 = new google.maps.InfoWindow({
+                                                  content: contentString5
+                                                });
+
+                                                marker5.addListener('click', function() {
+                                                  infowindow5.open(map, marker5);
+                                                });
+
+                                                flightPath0.setMap(map);
+                                                flightPath1.setMap(map);
+                                        } 
+                                    </script>
+                                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwBL6Y1AGo7QCc-c0Ls9S2MWDR9KkFQlY&callback=initMap"></script>
+                                </div>
                                 
                                 <form method="post" action="search.php">
                                 <div class="field half first">
@@ -88,32 +266,10 @@ Resources for Dev:
                                 <div class="field half first">
                                     <label for="from">From</label>
 								    <input type="text" name="from" id="from" />
-<!--
-                                    <select name="from" id="from">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half">
                                     <label for="to">To: </label>
                                     <input type="text" name="to" id="to"/>
-<!--
-                                    <select name="to" id="to">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half first">
                                     <label for="depart_date">Departure Date: </label>
@@ -335,32 +491,10 @@ Resources for Dev:
                                 <div class="field half first">
                                     <label for="from">From</label>
 								    <input type="text" name="from" id="from" />
-<!--
-                                    <select name="from" id="from">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half">
                                     <label for="to">To: </label>
                                     <input type="text" name="to" id="to"/>
-<!--
-                                    <select name="to" id="to">
-                                        <option value="none"></option>
-                                        <option value="Cedar Rapids">Cedar Rapids</option>
-                                        <option value="Chicago">Chicago</option>
-                                        <option value="Dallas">Dallas</option>
-                                        <option value="Detroit">Detroit</option>
-                                        <option value="Kansas City">Kansas City</option>
-                                        <option value="Minneapolis">Minneapolis</option>
-                                    </select>
--->
                                 </div>
                                 <div class="field half first">
                                     <label for="depart_date">Departure Date: </label>
