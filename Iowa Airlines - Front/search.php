@@ -136,6 +136,14 @@
                '<td width="150" align=center>' . $row['arrival_time'] . '</td>';
           echo '</tr>';
         }
+
+        echo "<button type='button' onclick='myFunction()'>New Search</button>";
+        echo '<script>
+            function myFunction(){
+                window.location = "index.html#search"
+            }
+            </script>';
+
     }
 >>>>>>> master
 
