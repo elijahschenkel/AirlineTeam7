@@ -25,13 +25,14 @@ Resources for Dev:
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
+							<!-- Font Awesome -->
 							<span class="icon fa-plane"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Iowa Airline</h1>
-								<p><!--[-->Where will you go?<!--]--><br />
-								<!--[-->Fly Iowa Air, now flying to five major cities!<!--]--></p>
+								<p>Where will you go?<br />
+								   Fly Iowa Air, now flying to five major cities!</p>
 							</div>
 						</div>
 						<nav>
@@ -264,12 +265,32 @@ Resources for Dev:
                                 </div>
 
                                 <div class="field half first">
-                                    <label for="from">From</label>
-								    <input type="text" name="from" id="from" />
+                                    <!-- <label for="from">From</label> -->
+								    <!-- <input type="text" name="from" id="from" /> -->
+                                    <label for="from">From: </label>
+                                        <select name="from" id="from">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
                                 </div>
                                 <div class="field half">
-                                    <label for="to">To: </label>
-                                    <input type="text" name="to" id="to"/>
+                                    <!-- <label for="to">To: </label> -->
+                                    <!-- <input type="text" name="to" id="to"/> -->
+                                    <label for="to">From: </label>
+                                        <select name="to" id="to">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
                                 </div>
                                 <div class="field half first">
                                     <label for="depart_date">Departure Date: </label>

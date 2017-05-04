@@ -45,7 +45,7 @@
             $arr[] = $row;
           }
         }
-
+        
         echo "<table border='1' style='border-collapse: collapse;border-color: silver;'>";  
         echo "<tr style='font-weight: bold;'>";  
         echo "<td width='150' align='center'>Flight Number</td>";  
@@ -67,6 +67,14 @@
                '<td width="150" align=center>' . $row['arrival_time'] . '</td>';
           echo '</tr>';
         }
+
+        echo "<button type='button' onclick='newSearch()'>New Search</button>";
+        echo '<script>
+            function newSearch(){
+                window.location = "index.html#search"
+            }
+            </script>';
+
     }
 
     else {
