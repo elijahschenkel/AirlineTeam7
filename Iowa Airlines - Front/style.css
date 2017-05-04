@@ -1386,7 +1386,7 @@
 			}
 
 			#main article .close {
-				display: block;
+				display: inline-block;
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -1404,7 +1404,7 @@
 					transition: background-color 0.2s ease-in-out;
                     
 					content: '';
-					display: block;
+					display: inline-block;
 					position: absolute;
 					top: 0.75rem;
 					left: 0.75rem;
