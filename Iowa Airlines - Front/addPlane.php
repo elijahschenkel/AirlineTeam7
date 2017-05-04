@@ -23,10 +23,16 @@
 
     $capacity = isset($_POST["max"]) ? $_POST["max"] : null;
 
+    $firstclass = isset($_POST["first"]) ? $_POST["first"] : null;
+        
+    $buisnessclass = isset($_POST["buis"]) ? $_POST["buis"] : null;
+        
+    $economyclass = isset($_POST["eco"]) ? $_POST["eco"] : null;
+
 
     if ($company && $model && $capacity){
 
-        $query = "INSERT INTO planes(company,model,capacity) VALUE ('$company','$model','$capacity')";
+        $query = "INSERT INTO planes(company,model,capacity,firstclass,buisnessclass,economyclass) VALUE ('$company','$model','$capacity','$firstclass','$buisnessclass','$economyclass')";
         
         $result = mysqli_query( $con, $query);
 
