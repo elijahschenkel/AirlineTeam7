@@ -954,7 +954,7 @@
 
 		#bg:before, #bg:after {
 			content: open-quote;
-			display: block;
+			display: inline-block;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -1035,7 +1035,7 @@
 
 		#wrapper:before {
 			content: '';
-			display: block;
+			display: inline-block;
 		}
 
 		@media screen and (max-width: 1680px) {
@@ -1099,7 +1099,7 @@
 
 			#header > *:before {
 				content: '';
-				display: block;
+				display: inline-block;
 				position: absolute;
 				top: calc(-3.5rem - 1px);
 				left: calc(50% - 1px);
