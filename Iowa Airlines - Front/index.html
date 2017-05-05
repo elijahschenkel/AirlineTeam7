@@ -700,36 +700,32 @@ Resources for Dev:
                                     <div class="field half first">
                                         <label for="PlaneID">Plane ID</label>
                                         <input type="text" name="planeID" id="planeID" />
-
-                                        <label for="company">Make of the Aircraft</label>
-										<input type="text" name="make" id="make" />
-
-                                        <label for="model">Model</label>
-										<input type="text" name="model" id="model" />
-
-                                        <label for="capacity">Passenger Capacity</label>
-										<input type="text" name="max" id="max" />
-
                                     </div>
                                     <div class="field half">
                                         <label for="flightnumber">Flight Number</label>
                                         <input type="text" name="flightnum" id="flightnum" />
-
+                                    </div>
+                                    <div class="field half first">
                                         <label for="departlocation">Departure Location</label>
                                         <input type="text" name="admin_deploc" id="admin_deploc" />
-
+                                    </div>
+                                    <div class="field half">
                                         <label for="departdate">Departure Date</label>
                                         <input type="text" name="admin_depdate" id="admin_depdate" />
-
+                                    </div>
+                                    <div class="field half first">
                                         <label for="departtime">Departure Time</label>
                                         <input type="text" name="admin_deptime" id="admin_deptime" />
-
+                                    </div>
+                                    <div class="field half">
                                         <label for="arrivallocation">Arrival Location</label>
                                         <input type="text" name="admin_arrloc" id="admin_arrloc" />
-
+                                    </div>
+                                    <div class="field half first">
                                         <label for="arrivaldate">Arrival Date</label>
                                         <input type="text" name="admin_arrdate" id="admin_arrdate" />
-
+                                    </div>
+                                    <div class="field half">
                                         <label for="arrivaltime">Arrival Time</label>
                                         <input type="text" name="admin_arrtime" id="admin_arrtime" />
                                     </div>
@@ -747,38 +743,54 @@ Resources for Dev:
                                     <div class="field half first">
                                         <label for="PlaneID">Plane ID</label>
                                         <input type="text" name="planeID" id="planeID" />
-
-                                        <label for="company">Make of the Aircraft</label>
-										<input type="text" name="make" id="make" />
-
-                                        <label for="model">Model</label>
-										<input type="text" name="model" id="model" />
-
-                                        <label for="capacity">Passenger Capacity</label>
-										<input type="text" name="max" id="max" />
-
                                     </div>
                                     <div class="field half">
                                         <label for="flightnumber">Flight Number</label>
                                         <input type="text" name="flightnum" id="flightnum" />
-
-                                        <label for="departlocation">Departure Location</label>
-                                        <input type="text" name="admin_deploc" id="admin_deploc" />
-
-                                        <label for="departdate">Departure Date</label>
+                                    </div>
+                                    <div class="field half first">
+                                    <label for="departlocation">Departure Location</label>
+                                        <select name="admin_deploc" id="admin_deploc">
+                                            <option value="none"></option>
+                                            <option value="Cedar Rapids">Cedar Rapids</option>
+                                            <option value="Chicago">Chicago</option>
+                                            <option value="Dallas">Dallas</option>
+                                            <option value="Detroit">Detroit</option>
+                                            <option value="Kansas City">Kansas City</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
+                                    </div>
+                                    <div class="field half">
+                                        <label for="departdate">Departure Date mm/dd/yyyy</label>
                                         <input type="text" name="admin_depdate" id="admin_depdate" />
-
+                                    </div>
+                                    <div class="field half first">
                                         <label for="departtime">Departure Time</label>
                                         <input type="text" name="admin_deptime" id="admin_deptime" />
-
-                                        <label for="arrivallocation">Arrival Location</label>
-                                        <input type="text" name="admin_arrloc" id="admin_arrloc" />
-
-                                        <label for="arrivaldate">Arrival Date</label>
+                                    </div>
+                                    <div class="field half">
+                                        <label for="arrivallocation">Arrival Location </label>
+                                            <select name="admin_arrloc" id="admin_arrloc">
+                                                <option value="none"></option>
+                                                <option value="Cedar Rapids">Cedar Rapids</option>
+                                                <option value="Chicago">Chicago</option>
+                                                <option value="Dallas">Dallas</option>
+                                                <option value="Detroit">Detroit</option>
+                                                <option value="Kansas City">Kansas City</option>
+                                                <option value="Minneapolis">Minneapolis</option>
+                                            </select>
+                                    </div>
+                                    <div class="field half first">
+                                        <label for="arrivaldate">Arrival Date mm/dd/yyyy</label>
                                         <input type="text" name="admin_arrdate" id="admin_arrdate" />
-
+                                    </div>
+                                    <div class="field half">
                                         <label for="arrivaltime">Arrival Time</label>
                                         <input type="text" name="admin_arrtime" id="admin_arrtime" />
+                                    </div>
+                                    <div class="field half first">
+                                        <label for="recurrence">How Many Recurring Days</label>
+                                        <input type="text" name="rec" id="rec" />
                                     </div>
                                     <ul class="actions">
                                         <li><input type="submit" value="Update" class="special" /></li>

@@ -16,13 +16,7 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         echo "</div>";
     }
-    $PlaneID = isset($_POST["planeID"]) ? $_POST["planeID"] : null;
-
-    $company = isset($_POST["make"]) ? $_POST["make"] : null;
-
-    $model = isset($_POST["model"]) ? $_POST["model"] : null;
-
-    $capacity = isset($_POST["max"]) ? $_POST["max"] : null;
+    $planeID = isset($_POST["planeID"]) ? $_POST["planeID"] : null;
 
     $flightnumber = isset($_POST["flightnum"]) ? $_POST["flightnum"] : null;
     
@@ -38,14 +32,50 @@
 
     $arrivaldate = isset($_POST["admin_arrdate"]) ? $_POST["admin_arrdate"] : null;
 
-    if ($PlaneID && $flightnumber && $departlocation){
+    $recurrence = isset($_POST["rec"]) ? $_POST["rec"] : null;
 
-        $query = "INSERT INTO flights(flightnumber,departure_loc,arrival_loc,departure_time,arrival_time,departure_date,arrival_date) VALUE ('$flightnumber','$departlocation','$arrivallocation','$departtime','$arrivaltime','$departdate','$arrivaldate')";
-        
-        $result = mysqli_query( $con, $query);
+    $date = explode("/",$departdate);
+
+    $flightnumberavailable = false;
+
+    if ($planeID && $flightnumber && $departlocation){
+        for ($x = 0; $x <= $recurrence; $x++) {
+            if ($date[1] >= 30){
+                $date[1] = 1;
+                $date[0] = $date[0] + 1;
+            }
+            if ($date[0] >= 12){
+                $date[0] = 1;
+                $date[2] = 1;
+            }
+            $day = (string) $date[1];
+            $month = (string) $date[0];
+            $year = (string) $date[2];
+            $newdate = $month . "/" . $day . "/" . $year;
+            While (!$flightnumberavailable){
+                $query = "SELECT flightnumber FROM flights WHERE flightnumber = '$flightnumber'";
+
+                $result = mysqli_query( $con, $query);
+
+                $row = mysqli_fetch_array($result);
+
+                if(!$row){
+                    $flightnumberavailable = true;
+                }
+                else {
+                    $flightnumber = $flightnumber + 1;
+                }
+            }
+            $flightnumberavailable = false;
+            $query = "INSERT INTO flights(flightnumber,departure_loc,arrival_loc,departure_time,arrival_time,departure_date,arrival_date,planeID) VALUE ('$flightnumber','$departlocation','$arrivallocation','$departtime','$arrivaltime','$newdate','$newdate','$planeID')";
+
+            $result = mysqli_query( $con, $query);
+            $date[1] = $date[1] + 1;
+            $flightnumber = $flightnumber + 1;
+        }
         
         // TODO: check if plane is in DB and add it if it is not
-        
+        /*
         $query = "SELECT planeID FROM planes WHERE planeID = '$PlaneID'";
 
         $result = mysqli_query( $con, $query);
@@ -57,7 +87,7 @@
         }
         else {//plane does exist
             
-        }
+        }*/
         
         
 
@@ -67,8 +97,8 @@
     }
     else {
         echo '<script type="text/javascript">
-            window.location = "index.html#admin_newflight_unsuccessful"
-        </script>';
+           window.location = "index.html#admin_login"
+           </script>';
     }
 
 
